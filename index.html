@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deauvill Homestay - Your Serene Escape in Varkala</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Apply Inter font family to the entire body */
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll due to animations */
+        }
+
+        /* Custom Keyframe Animations for a dynamic feel */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Apply animations to specific elements */
+        .animate-fade-in-down { animation: fadeInDown 0.8s ease-out forwards; }
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
+        .animate-slide-in-left { animation: slideInLeft 0.8s ease-out forwards; }
+        .animate-slide-in-right { animation: slideInRight 0.8s ease-out forwards; }
+
+        /* Base style for page content sections - hidden by default */
+        .page-content {
+            display: none;
+            animation: fadeIn 0.6s ease-out forwards; /* Fade in when active */
+        }
+        /* Style for the active page content section - shown */
+        .page-content.active {
+            display: block;
+        }
+
+        /* Hero Section Specific Styles */
+        .hero-section {
+            /* Updated placeholder image with a green tint */
+            background-image: url('https://ik.imagekit.io/vlvokmknvv/Deauvill/deauvill-resort.jpg?updatedAt=1748184001992');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 1; /* Ensure content is above overlay */
+        }
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            /* Adjusted gradient for green theme */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+            z-index: -1; /* Place behind content */
+        }
+
+        /* Button Custom Styles - now with green gradient */
+        .btn-gradient {
+            background-image: linear-gradient(to right, #22C55E 0%, #16A34A 100%); /* Green gradient */
+            transition: all 0.3s ease;
+        }
+        .btn-gradient:hover {
+            background-position: right center; /* Shift gradient on hover */
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow */
+            transform: translateY(-3px); /* Subtle lift effect */
+        }
+
+        /* Gallery Item Custom Styles */
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 0.75rem; /* Tailwind's rounded-lg */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1); /* Zoom effect on image */
+        }
+        .gallery-item .overlay {
+            opacity: 0;
+            background: rgba(0, 0, 0, 0.6); /* Darker overlay */
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 0.75rem;
+        }
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+        .gallery-item .overlay p {
+            color: white;
+            font-size: 1.5rem; /* Larger text */
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Pricing Table Enhancements - now with green header and hover */
+        .pricing-table th {
+            background-color: #047857; /* Darker green for header (emerald-800 equivalent) */
+            color: white;
+            padding: 1.25rem 1.5rem;
+            text-align: left;
+            font-size: 1.125rem;
+            font-weight: 700;
+        }
+        .pricing-table td {
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #E5E7EB; /* Light grey border */
+        }
+        .pricing-table tbody tr:nth-child(odd) {
+            background-color: #F9FAFB; /* Light grey for odd rows */
+        }
+        .pricing-table tbody tr:hover {
+            background-color: #D1FAE5; /* Lighter green on hover (emerald-100 equivalent) */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <nav class="bg-white shadow-lg p-4 sticky top-0 z-50 rounded-b-xl">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-3xl font-extrabold text-emerald-700 hover:text-emerald-900 transition-colors duration-300 transform hover:scale-105" onclick="showPage('home'); return false;">Deauvill Homestay</a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#" class="text-gray-700 hover:text-emerald-600 transition-colors duration-300 font-semibold text-lg py-2 px-3 rounded-md hover:bg-emerald-50" onclick="showPage('home'); return false;">Home</a>
+                <a href="#" class="text-gray-700 hover:text-emerald-600 transition-colors duration-300 font-semibold text-lg py-2 px-3 rounded-md hover:bg-emerald-50" onclick="showPage('gallery'); return false;">Gallery</a>
+                <a href="#" class="text-gray-700 hover:text-emerald-600 transition-colors duration-300 font-semibold text-lg py-2 px-3 rounded-md hover:bg-emerald-50" onclick="showPage('price'); return false;">Price</a>
+                <a href="#" class="text-gray-700 hover:text-emerald-600 transition-colors duration-300 font-semibold text-lg py-2 px-3 rounded-md hover:bg-emerald-50" onclick="showPage('about'); return false;">About</a>
+                <a href="#" class="text-gray-700 hover:text-emerald-600 transition-colors duration-300 font-semibold text-lg py-2 px-3 rounded-md hover:bg-emerald-50" onclick="showPage('contact'); return false;">Contact</a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition-colors duration-300" aria-label="Toggle mobile menu">
+                <i class="fas fa-bars text-3xl"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white mt-4 rounded-lg shadow-lg">
+            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-md transition-colors duration-200 text-lg" onclick="showPage('home'); toggleMobileMenu(); return false;">Home</a>
+            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-md transition-colors duration-200 text-lg" onclick="showPage('gallery'); toggleMobileMenu(); return false;">Gallery</a>
+            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-md transition-colors duration-200 text-lg" onclick="showPage('price'); toggleMobileMenu(); return false;">Price</a>
+            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-md transition-colors duration-200 text-lg" onclick="showPage('about'); toggleMobileMenu(); return false;">About</a>
+            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-md transition-colors duration-200 text-lg" onclick="showPage('contact'); toggleMobileMenu(); return false;">Contact</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto my-8 p-4">
+
+        <section id="home" class="page-content active bg-white rounded-xl shadow-2xl mb-12 overflow-hidden">
+            <div class="hero-section text-white py-20 md:py-32 text-center relative rounded-t-xl">
+                <div class="hero-overlay"></div>
+                <div class="relative z-10 px-4">
+                    <h1 class="text-5xl md:text-7xl font-extrabold mb-6 animate-fade-in-down drop-shadow-lg">Deauvill Homestay</h1>
+                    <p class="text-xl md:text-3xl font-light mb-10 animate-fade-in-up drop-shadow-md">Your tranquil haven amidst the beauty of Varkala, Kerala.</p>
+                    <button class="btn-gradient text-white font-bold py-4 px-10 rounded-full shadow-xl text-lg transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.4s;" onclick="showPage('contact'); return false;">
+                        Book Your Serene Escape <i class="fas fa-calendar-alt ml-3"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-10 items-center mb-12">
+                    <div class="animate-slide-in-left">
+                        <h2 class="text-4xl font-bold text-emerald-700 mb-6">Discover Your Perfect Getaway</h2>
+                        <p class="text-gray-700 leading-relaxed text-lg mb-4">
+                            Nestled amidst the lush greenery and tranquil backwaters of Varkala, Deauvill Homestay offers a perfect blend of comfort and natural beauty.
+                            Whether you're seeking a peaceful retreat, an adventurous exploration of the local culture, or simply a relaxing getaway, our homestay provides an idyllic setting.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed text-lg">
+                            Enjoy spacious, elegantly designed rooms, authentic local cuisine prepared with fresh ingredients, and personalized hospitality that makes you feel right at home. We are just a short distance from Varkala's famous cliffs, pristine beaches, and vibrant local markets.
+                        </p>
+                        <button class="mt-8 btn-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg transition-all duration-300" onclick="showPage('about'); return false;">
+                            Learn More About Us <i class="fas fa-info-circle ml-2"></i>
+                        </button>
+                    </div>
+                    <div class="animate-slide-in-right">
+                        <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/deauvill-resort.jpg?updatedAt=1748184001992" alt="Deauvill Homestay Interior Lounge" class="w-full h-auto rounded-xl shadow-xl transform transition-transform duration-500 hover:scale-102">
+                    </div>
+                </div>
+
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-emerald-700 mb-8">Why Choose Deauvill?</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <div class="bg-emerald-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 animate-fade-in" style="animation-delay: 0.6s;">
+                            <i class="fas fa-bed text-5xl text-emerald-600 mb-4"></i>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Comfortable Accommodations</h3>
+                            <p class="text-gray-600">Spacious and well-appointed rooms designed for your utmost relaxation.</p>
+                        </div>
+                        <!-- <div class="bg-emerald-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 animate-fade-in" style="animation-delay: 0.8s;">
+                            <i class="fas fa-utensils text-5xl text-emerald-600 mb-4"></i>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Authentic Local Cuisine</h3>
+                            <p class="text-gray-600">Savor delicious homemade Kerala dishes, made with fresh, local ingredients.</p>
+                        </div> -->
+                        <div class="bg-emerald-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 animate-fade-in" style="animation-delay: 0.8s;">
+                            <i class="fas fa-umbrella-beach text-5xl text-emerald-600 mb-4"></i>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Unbeatable Beach Proximity</h3>
+                            <p class="text-gray-600">Enjoy the sun and sand with just a 2-minute leisurely walk to Varkala's stunning beach.</p>
+                        </div>
+                        <div class="bg-emerald-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 animate-fade-in" style="animation-delay: 1s;">
+                            <i class="fas fa-leaf text-5xl text-emerald-600 mb-4"></i>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Serene Natural Surroundings</h3>
+                            <p class="text-gray-600">Enjoy the peaceful ambiance of our lush gardens and proximity to nature.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="page-content bg-white p-8 rounded-xl shadow-2xl mb-12">
+            <h1 class="text-4xl font-extrabold text-emerald-700 mb-10 text-center animate-fade-in-down">A Glimpse of Deauvill</h1>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="gallery-item animate-fade-in" style="animation-delay: 0.2s;">
+                    <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/deauvill-resort.jpg?updatedAt=1748184001992" alt="Homestay Room 1" class="w-full h-64 object-cover">
+                    <div class="overlay"><p>Cozy Bedroom</p></div>
+                </div>
+                <div class="gallery-item animate-fade-in" style="animation-delay: 0.4s;">
+                    <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/balcony.jpg?updatedAt=1748184001869" alt="Homestay Balcony Area" class="w-full h-64 object-cover">
+                    <div class="overlay"><p>Balcony</p></div>
+                </div>
+                <div class="gallery-item animate-fade-in" style="animation-delay: 0.6s;">
+                    <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/room.jpg?updatedAt=1748184002134" alt="Homestay Room 1" class="w-full h-64 object-cover">
+                    <div class="overlay"><p>Cozy Bedroom</p></div>
+                </div>
+                <div class="gallery-item animate-fade-in" style="animation-delay: 0.8s;">
+                    <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/deauvill-all.jpg?updatedAt=1748184002163" alt="Homestay Exterior" class="w-full h-64 object-cover">
+                    <div class="overlay"><p>Charming Exterior</p></div>
+                </div>
+                <div class="gallery-item animate-fade-in" style="animation-delay: 1s;">
+                    <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/allview.jpg?updatedAt=1748186154544" alt="Homestay Exterior" class="w-full h-64 object-cover">
+                    <div class="overlay"><p>Charming Exterior</p></div>
+                </div>
+                <div class="gallery-item animate-fade-in" style="animation-delay: 1.2s;">
+                    <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/balcony.jpg?updatedAt=1748186211536" alt="Homestay Balcony Area" class="w-full h-64 object-cover">
+                    <div class="overlay"><p>Private Balcony</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="price" class="page-content bg-white p-8 rounded-xl shadow-2xl mb-12">
+            <h1 class="text-4xl font-extrabold text-emerald-700 mb-10 text-center animate-fade-in-down">Our Accommodation & Pricing</h1>
+            <div class="overflow-x-auto rounded-lg shadow-lg">
+                <table class="min-w-full bg-white pricing-table">
+                    <thead>
+                        <tr>
+                            <th class="py-4 px-6 text-left text-lg font-semibold rounded-tl-lg">Room Type</th>
+                            <th class="py-4 px-6 text-left text-lg font-semibold">Capacity</th>
+                            <th class="py-4 px-6 text-left text-lg font-semibold">Key Amenities</th>
+                            <th class="py-4 px-6 text-left text-lg font-semibold rounded-tr-lg">Price per Night (INR)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="animate-fade-in-up" style="animation-delay: 0.2s;">
+                            <td class="py-4 px-6">Standard Double Room</td>
+                            <td class="py-4 px-6">2 Guests</td>
+                            <td class="py-4 px-6">Private Balcony, Wi-Fi</td>
+                            <td class="py-4 px-6 font-bold text-emerald-700 text-xl">₹ 1500</td>
+                        </tr>
+                        <tr class="animate-fade-in-up" style="animation-delay: 0.4s;">
+                            <td class="py-4 px-6">Deluxe Double Room</td>
+                            <td class="py-4 px-6">2 Guests</td>
+                            <td class="py-4 px-6">Private Balcony, Wi-Fi</td>
+                            <td class="py-4 px-6 font-bold text-emerald-700 text-xl">₹ 2000</td>
+                        </tr>
+                        <tr class="animate-fade-in-up" style="animation-delay: 0.6s;">
+                            <td class="py-4 px-6">AC Room</td>
+                            <td class="py-4 px-6">2 Guests</td>
+                            <td class="py-4 px-6">AC, Private Balcony, Wi-Fi</td>
+                            <td class="py-4 px-6 font-bold text-emerald-700 text-xl">₹ 2500</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center text-gray-600 mt-8 text-md">
+                *Prices are indicative and subject to change based on seasonality, demand, and special events. Please contact us directly for the most current rates, availability, and exclusive package deals.
+            </p>
+            <div class="text-center mt-8">
+                <button class="btn-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg transition-all duration-300" onclick="showPage('contact'); return false;">
+                    Check Availability <i class="fas fa-calendar-check ml-2"></i>
+                </button>
+            </div>
+        </section>
+
+        <section id="about" class="page-content bg-white p-8 rounded-xl shadow-2xl mb-12">
+            <h1 class="text-4xl font-extrabold text-emerald-700 mb-10 text-center animate-fade-in-down">Our Story & Philosophy</h1>
+            <div class="prose max-w-none text-gray-700 text-lg leading-relaxed">
+                <div class="grid md:grid-cols-2 gap-8 items-center mb-8">
+                    <div class="animate-slide-in-left">
+                        <p class="mb-4">
+                            Deauvill Homestay is more than just a place to stay; it's a heartfelt endeavor to share the warmth and authenticity of Kerala with travelers from around the globe.
+                Established in <strong>2008</strong> by <strong>NG Pradeep</strong>, our homestay was born from a passion for genuine hospitality and a deep love for Varkala's serene beauty.
+                        </p>
+                        <p class="mb-4">
+                            Our philosophy is simple: to create a home-away-from-home experience where every guest feels cherished and connected to the local culture. We primarily offer comfortable stays,
+                and for our valued long-term guests, we provide access to a shared kitchen facility. We believe in personalized service,
+                attending to the unique needs of each visitor, and offering genuine insights into the vibrant life of Varkala.
+                We strive to make your stay truly memorable and enriching
+                        </p>
+                    </div>
+                    <div class="animate-slide-in-right">
+                        <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/logo.jpg?updatedAt=1748184811592" alt="Homestay Family" class="w-full h-auto rounded-xl shadow-lg">
+                    </div>
+                </div>
+
+                <h2 class="text-3xl font-semibold text-emerald-600 mt-10 mb-5 flex items-center animate-fade-in-up" style="animation-delay: 0.2s;"><i class="fas fa-map-marked-alt mr-4 text-4xl"></i>Our Idyllic Location: Varkala, Kerala</h2>
+                <p class="mb-4">
+                    Varkala, a jewel on the Arabian Sea coast, is a serene coastal town in the southern part of Kerala, India. It's globally renowned for its distinctive cliff formations,
+        pristine golden beaches, and natural mineral springs believed to have medicinal properties. It's a magnet for spiritual seekers, beach enthusiasts, and those
+        seeking rejuvenating Ayurvedic treatments and tranquil yoga retreats.
+                </p>
+                <p class="mb-4">
+                    Deauvill Homestay boasts a truly prime location. We are just a <strong>2-minute</strong> walk from the beautiful Varkala beach**, offering unparalleled convenience for your seaside adventures.
+        Furthermore, our homestay is within easy walking distance of supermarkets, various shops, and a wide array of restaurants, ensuring all your daily needs and culinary desires are met effortlessly.
+        The Varkala Railway Station is also conveniently located just <strong>3.5 km away</strong>.
+                </p>
+
+                <h2 class="text-3xl font-semibold text-emerald-600 mt-10 mb-5 flex items-center animate-fade-in-up" style="animation-delay: 0.4s;"><i class="fas fa-handshake-alt-slash mr-4 text-4xl"></i>Our Commitment to You</h2>
+                <p class="mb-4">
+                    We are deeply committed to fostering sustainable tourism practices, actively supporting local communities, and diligently preserving the breathtaking natural beauty of Varkala.
+                    Every aspect of our homestay is designed with environmental consciousness and community well-being in mind.
+                </p>
+                <p>
+                    We warmly invite you to embark on a journey with us and experience the true essence of Kerala – its vibrant culture, its tranquil landscapes, and its unparalleled hospitality.
+        Come, be a part of our family at Deauvill Homestay.
+                </p>
+            </div>
+        </section>
+
+        <section id="contact" class="page-content bg-white p-8 rounded-xl shadow-2xl mb-12">
+            <h1 class="text-4xl font-extrabold text-emerald-700 mb-10 text-center animate-fade-in-down">Connect With Us</h1>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="animate-slide-in-left">
+                    <h2 class="text-3xl font-semibold text-emerald-600 mb-6">Reach Out to Deauvill</h2>
+                    <p class="text-gray-700 text-lg mb-8 leading-relaxed">
+                        We are eager to assist you with your booking, answer any questions, or help with special arrangements. Your memorable stay begins here!
+                    </p>
+                    <div class="space-y-6">
+                        <p class="flex items-center text-gray-700 text-xl">
+                            <i class="fas fa-map-marker-alt text-emerald-600 mr-5 text-2xl"></i>
+                            Deauvill home stay, Thiruvambadi Rd, opposite Nikhil ayurvedic heritage, Varkala, Kerala, India - 695141
+                        </p>
+                        <p class="flex items-center text-gray-700 text-xl">
+                            <i class="fas fa-phone-alt text-emerald-600 mr-5 text-2xl"></i>
+                            <a href="tel:+919876543210" class="hover:underline font-medium">+91 98469 23877</a>
+                        </p>
+                        <p class="flex items-center text-gray-700 text-xl">
+                            <i class="fas fa-envelope text-emerald-600 mr-5 text-2xl"></i>
+                            <a href="mailto:info@deauvillhomestay.com" class="hover:underline font-medium">info@deauvillhomestay.com</a>
+                        </p>
+                        <p class="flex items-center text-gray-700 text-xl">
+                            <i class="fas fa-globe text-emerald-600 mr-5 text-2xl"></i>
+                            <span class="font-medium">www.deauvillhomestay.com</span>
+                        </p>
+                    </div>
+
+                    <h2 class="text-3xl font-semibold text-emerald-600 mt-12 mb-5">Locate Us Easily</h2>
+                    <p class="text-gray-700 text-lg mb-6">
+                        While we can't embed a live interactive map here, you can find our precise location on Google Maps using the link below.
+                    </p>
+                    <a href="https://maps.app.goo.gl/WExFQ8sgijJHnibP9" target="_blank" class="inline-block btn-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg transition-all duration-300 mb-8">
+                        Get Directions <i class="fas fa-location-arrow ml-3"></i>
+                    </a>
+                    <!-- <img src="https://placehold.co/600x350/2E8B57/FFFFFF?text=Varkala+Map+Location" alt="Map Placeholder for Deauvill Homestay" class="w-full h-auto rounded-xl shadow-md"> -->
+                </div>
+
+                <div class="animate-slide-in-right">
+                    <h2 class="text-3xl font-semibold text-emerald-600 mb-6">Send Us a Message</h2>
+                    <form class="space-y-7 p-6 bg-emerald-50 rounded-xl shadow-inner">
+                        <div>
+                            <label for="name" class="block text-gray-800 text-base font-bold mb-2">Your Name:</label>
+                            <input type="text" id="name" name="name" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-3 focus:ring-emerald-400 focus:border-emerald-500 transition-all duration-200 text-lg" placeholder="Enter your full name" aria-label="Your Name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-800 text-base font-bold mb-2">Your Email:</label>
+                            <input type="email" id="email" name="email" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-3 focus:ring-emerald-400 focus:border-emerald-500 transition-all duration-200 text-lg" placeholder="your.email@example.com" aria-label="Your Email">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-800 text-base font-bold mb-2">Subject:</label>
+                            <input type="text" id="subject" name="subject" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-3 focus:ring-emerald-400 focus:border-emerald-500 transition-all duration-200 text-lg" placeholder="Regarding your stay or inquiry" aria-label="Subject">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-800 text-base font-bold mb-2">Your Message:</label>
+                            <textarea id="message" name="message" rows="7" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-3 focus:ring-emerald-400 focus:border-emerald-500 transition-all duration-200 text-lg" placeholder="Type your detailed message here..." aria-label="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn-gradient text-white font-bold py-3 px-10 rounded-full shadow-lg text-lg transition-all duration-300">
+                            Send Message <i class="fas fa-paper-plane ml-3"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-emerald-950 text-white p-8 text-center rounded-t-xl shadow-inner mt-12">
+        <div class="container mx-auto">
+            <p class="text-lg mb-3">© 2025 Deauvill Homestay. All rights reserved.</p>
+            <p class="text-md">Crafted with <i class="fas fa-heart text-red-500 animate-pulse"></i> in the serene landscapes of Varkala, Kerala.</p>
+            <div class="flex justify-center space-x-6 mt-6">
+                <a href="#" class="text-white hover:text-emerald-400 transition-colors duration-300 text-2xl" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white hover:text-emerald-400 transition-colors duration-300 text-2xl" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-white hover:text-emerald-400 transition-colors duration-300 text-2xl" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /**
+         * Toggles the visibility of different content sections (pages) on the website.
+         * Only the specified page will be visible, others will be hidden.
+         * Scrolls the window to the top after changing the page.
+         * @param {string} pageId - The ID of the page section to show (e.g., 'home', 'gallery').
+         */
+        function showPage(pageId) {
+            // Get all elements with the class 'page-content'
+            const pages = document.querySelectorAll('.page-content');
+            // Iterate over each page and remove the 'active' class (hiding them)
+            pages.forEach(page => {
+                page.classList.remove('active');
+            });
+            // Add the 'active' class to the specified page (showing it)
+            document.getElementById(pageId).classList.add('active');
+            // Scroll to the top of the window with a smooth animation
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Get references to the mobile menu button and the mobile menu itself
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        /**
+         * Toggles the 'hidden' class on the mobile menu, showing or hiding it.
+         */
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Add an event listener to the mobile menu button to call toggleMobileMenu on click
+        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+
+        // Event listener for when the DOM content is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            // Show the 'home' page by default when the website loads
+            showPage('home');
+        });
+    </script>
+
+</body>
+</html>
