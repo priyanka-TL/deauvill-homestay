@@ -1,479 +1,902 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deauvill Homestay - Your Serene Escape in Varkala</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        /* Apply Inter font family to the entire body */
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden; /* Prevent horizontal scroll due to animations */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        /* Custom Keyframe Animations for a dynamic feel */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-50px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-        @keyframes slideInRight {
-            from { opacity: 0; transform: translateX(50px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
+  <!-- Primary SEO -->
+  <title>Deauvill Homestay Varkala | Luxury Beach Stay Kerala | ₹1500/night</title>
+  <meta name="description" content="Deauvill Homestay in Varkala, Kerala — just 2 minutes from the beach. Elegant rooms from ₹1500/night. Book direct for best rates & warm Kerala hospitality since 2008. Call +91 98469 23877.">
+  <meta name="keywords" content="luxury homestay Varkala, homestay near Varkala beach, beach stay Kerala, coastal homestay Kerala, romantic stay Kerala, family stay Varkala, Varkala cliff stay, Kerala beach homestay, budget luxury Kerala, waterfront stay Varkala">
+  <link rel="canonical" href="https://priyanka-tl.github.io/deauvill-homestay/">
 
-        /* Apply animations to specific elements */
-        .animate-fade-in-down { animation: fadeInDown 0.8s ease-out forwards; }
-        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
-        .animate-fade-in { animation: fadeIn 1s ease-out forwards; }
-        .animate-slide-in-left { animation: slideInLeft 0.8s ease-out forwards; }
-        .animate-slide-in-right { animation: slideInRight 0.8s ease-out forwards; }
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Deauvill Homestay Varkala | Luxury Beach Stay Kerala">
+  <meta property="og:description" content="Just 2 minutes from Varkala beach. Elegant rooms, warm hospitality, and the best of Kerala. Book direct for best rates.">
+  <meta property="og:image" content="https://ik.imagekit.io/vlvokmknvv/Deauvill/deauvill-resort.jpg?updatedAt=1748184001992">
+  <meta property="og:url" content="https://priyanka-tl.github.io/deauvill-homestay/">
+  <meta property="og:site_name" content="Deauvill Homestay">
+  <meta property="og:locale" content="en_IN">
 
-        /* Base style for page content sections - hidden by default */
-        .page-content {
-            display: none;
-            animation: fadeIn 0.6s ease-out forwards; /* Fade in when active */
-        }
-        /* Style for the active page content section - shown */
-        .page-content.active {
-            display: block;
-        }
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Deauvill Homestay Varkala | Luxury Beach Stay Kerala">
+  <meta name="twitter:description" content="Just 2 minutes from Varkala beach. Elegant rooms, warm Kerala hospitality since 2008.">
+  <meta name="twitter:image" content="https://ik.imagekit.io/vlvokmknvv/Deauvill/deauvill-resort.jpg?updatedAt=1748184001992">
 
-        /* Hero Section Specific Styles */
-        .hero-section {
-            /* Updated placeholder image with a green tint */
-            background-image: url('https://ik.imagekit.io/vlvokmknvv/Deauvill/deauvill-resort.jpg?updatedAt=1748184001992');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            z-index: 1; /* Ensure content is above overlay */
-        }
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            /* Adjusted gradient for green theme */
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
-            z-index: -1; /* Place behind content */
-        }
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Deauvill Homestay",
+    "description": "A boutique homestay in Varkala, Kerala, just 2 minutes from the beach. Elegant rooms, warm Kerala hospitality since 2008.",
+    "url": "https://priyanka-tl.github.io/deauvill-homestay/",
+    "telephone": "+919846923877",
+    "email": "pratheepgopalan1@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Thiruvambadi Rd, opposite Nikhil Ayurvedic Heritage",
+      "addressLocality": "Varkala",
+      "addressRegion": "Kerala",
+      "postalCode": "695141",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "8.7379",
+      "longitude": "76.7169"
+    },
+    "image": [
+      "https://ik.imagekit.io/vlvokmknvv/Deauvill/deauvill-resort.jpg?updatedAt=1748184001992",
+      "https://ik.imagekit.io/vlvokmknvv/Deauvill/balcony.jpg?updatedAt=1748184001869",
+      "https://ik.imagekit.io/vlvokmknvv/Deauvill/room.jpg?updatedAt=1748184002134"
+    ],
+    "priceRange": "₹₹",
+    "checkinTime": "12:00",
+    "checkoutTime": "11:00",
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Free WiFi", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Private Balcony", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Air Conditioning", "value": true}
+    ],
+    "hasMap": "https://maps.app.goo.gl/WExFQ8sgijJHnibP9",
+    "foundingDate": "2008",
+    "founder": {"@type": "Person", "name": "NG Pradeep"}
+  }
+  </script>
 
-        /* Button Custom Styles - now with green gradient */
-        .btn-gradient {
-            background-image: linear-gradient(to right, #22C55E 0%, #16A34A 100%); /* Green gradient */
-            transition: all 0.3s ease;
-        }
-        .btn-gradient:hover {
-            background-position: right center; /* Shift gradient on hover */
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow */
-            transform: translateY(-3px); /* Subtle lift effect */
-        }
+  <!-- FAQ Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How far is Deauvill Homestay from Varkala beach?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Deauvill Homestay is just a 2-minute walk from Varkala beach — one of the closest stays to the shore."}
+      },
+      {
+        "@type": "Question",
+        "name": "What is the price per night at Deauvill Homestay Varkala?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Rooms start from ₹1500/night for our Comfort Double Room. Deluxe Double at ₹2000 and AC Premium Room at ₹2500 per night."}
+      },
+      {
+        "@type": "Question",
+        "name": "How do I book a stay at Deauvill Homestay?",
+        "acceptedAnswer": {"@type": "Answer", "text": "Book directly via WhatsApp (+91 98469 23877) or email info@deauvillhomestay.com for the best rates — no OTA markups."}
+      },
+      {
+        "@type": "Question",
+        "name": "What amenities does Deauvill Homestay Varkala offer?",
+        "acceptedAnswer": {"@type": "Answer", "text": "All rooms include free Wi-Fi and private balconies. AC Premium Room has air conditioning. Long-term guests have shared kitchen access."}
+      }
+    ]
+  }
+  </script>
 
-        /* Gallery Item Custom Styles */
-        .gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 0.75rem; /* Tailwind's rounded-lg */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .gallery-item:hover {
-            transform: translateY(-5px); /* Lift effect on hover */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        .gallery-item img {
-            transition: transform 0.5s ease;
-        }
-        .gallery-item:hover img {
-            transform: scale(1.1); /* Zoom effect on image */
-        }
-        .gallery-item .overlay {
-            opacity: 0;
-            background: rgba(0, 0, 0, 0.6); /* Darker overlay */
-            transition: opacity 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: 0.75rem;
-        }
-        .gallery-item:hover .overlay {
-            opacity: 1;
-        }
-        .gallery-item .overlay p {
-            color: white;
-            font-size: 1.5rem; /* Larger text */
-            font-weight: 600;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-        }
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
-        /* Pricing Table Enhancements - now with green header and hover */
-        .pricing-table th {
-            background-color: #047857; /* Darker green for header (emerald-800 equivalent) */
-            color: white;
-            padding: 1.25rem 1.5rem;
-            text-align: left;
-            font-size: 1.125rem;
-            font-weight: 700;
-        }
-        .pricing-table td {
-            padding: 1rem 1.5rem;
-            border-bottom: 1px solid #E5E7EB; /* Light grey border */
-        }
-        .pricing-table tbody tr:nth-child(odd) {
-            background-color: #F9FAFB; /* Light grey for odd rows */
-        }
-        .pricing-table tbody tr:hover {
-            background-color: #D1FAE5; /* Lighter green on hover (emerald-100 equivalent) */
-        }
-    </style>
+  <style>
+    :root {
+      --green-deep:   #0A3622;
+      --green-mid:    #155C38;
+      --green-light:  #1E7A49;
+      --gold:         #C9A96E;
+      --gold-light:   #E2C99A;
+      --cream:        #FBF7F0;
+      --cream-dark:   #F0E8DA;
+      --white:        #FFFFFF;
+      --text-dark:    #1A1A1A;
+      --text-mid:     #3D3D3D;
+      --text-muted:   #6B7280;
+      --shadow-sm:    0 2px 8px rgba(0,0,0,0.07);
+      --shadow-md:    0 8px 32px rgba(0,0,0,0.12);
+      --shadow-lg:    0 24px 64px rgba(0,0,0,0.16);
+      --radius-sm:    8px;
+      --radius-md:    16px;
+      --radius-lg:    24px;
+      --ease:         cubic-bezier(0.4,0,0.2,1);
+      --transition:   all 0.35s cubic-bezier(0.4,0,0.2,1);
+      --serif:        'Playfair Display', Georgia, serif;
+      --sans:         'Inter', system-ui, -apple-system, sans-serif;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--sans); background: var(--cream); color: var(--text-dark); overflow-x: hidden; line-height: 1.7; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; outline: none; background: none; }
+
+    /* Utility */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 96px 0; }
+    .eyebrow { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; display: block; }
+    .gold-line { width: 52px; height: 2px; background: var(--gold); margin: 14px auto 32px; }
+    .gold-line-left { margin-left: 0; }
+    .section-header { text-align: center; max-width: 600px; margin: 0 auto 64px; }
+    .section-header h2 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); color: var(--green-deep); margin-bottom: 14px; line-height: 1.2; }
+    .section-header p { color: var(--text-muted); font-size: 1.05rem; }
+
+    /* Buttons */
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 30px; border-radius: 50px; font-family: var(--sans); font-weight: 600; font-size: 0.92rem; letter-spacing: 0.02em; transition: var(--transition); }
+    .btn-primary { background: linear-gradient(135deg, var(--green-mid), var(--green-deep)); color: var(--white); box-shadow: 0 4px 18px rgba(10,54,34,0.28); }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(10,54,34,0.38); }
+    .btn-gold { background: linear-gradient(135deg, var(--gold), #A67C45); color: var(--white); box-shadow: 0 4px 18px rgba(201,169,110,0.32); }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,169,110,0.48); }
+    .btn-outline { border: 2px solid rgba(255,255,255,0.75); color: var(--white); }
+    .btn-outline:hover { background: rgba(255,255,255,0.12); transform: translateY(-2px); }
+    .btn-whatsapp { background: #25D366; color: var(--white); box-shadow: 0 4px 18px rgba(37,211,102,0.32); }
+    .btn-whatsapp:hover { background: #1DA851; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(37,211,102,0.42); }
+    .btn-ghost { border: 2px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.85); background: rgba(255,255,255,0.06); }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* Scarcity banner */
+    .scarcity-bar { background: linear-gradient(90deg, #7C2D12, #991B1B); color: #fff; text-align: center; padding: 10px 16px; font-size: 0.82rem; font-weight: 500; display: flex; align-items: center; justify-content: center; gap: 8px; position: relative; z-index: 1001; }
+    .scarcity-bar a { color: #FCA5A5; text-decoration: underline; }
+
+    /* Navigation */
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; padding: 22px 0; transition: var(--transition); }
+    .nav.scrolled { background: rgba(255,255,255,0.97); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); padding: 13px 0; box-shadow: 0 2px 24px rgba(0,0,0,0.07); }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .nav-logo { font-family: var(--serif); font-size: 1.45rem; font-weight: 700; color: #fff; letter-spacing: -0.01em; transition: color 0.3s; }
+    .nav-logo span { color: var(--gold); }
+    .nav.scrolled .nav-logo { color: var(--green-deep); }
+    nav ul { display: flex; align-items: center; gap: 34px; list-style: none; }
+    nav ul a { font-size: 0.82rem; font-weight: 600; color: rgba(255,255,255,0.88); letter-spacing: 0.07em; text-transform: uppercase; transition: var(--transition); position: relative; }
+    nav ul a::after { content: ''; position: absolute; bottom: -3px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.3s; }
+    nav ul a:hover::after, nav ul a:focus::after { width: 100%; }
+    nav ul a:hover { color: var(--gold-light); }
+    .nav.scrolled nav ul a { color: var(--text-mid); }
+    .nav.scrolled nav ul a:hover { color: var(--green-mid); }
+    .nav-cta { padding: 10px 22px !important; font-size: 0.82rem !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+    .hamburger span { display: block; width: 23px; height: 2px; background: #fff; transition: var(--transition); border-radius: 2px; }
+    .nav.scrolled .hamburger span { background: var(--text-dark); }
+
+    /* Mobile Menu */
+    .mobile-nav { display: none; position: fixed; inset: 0; background: var(--green-deep); z-index: 999; flex-direction: column; align-items: center; justify-content: center; gap: 28px; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { font-family: var(--serif); font-size: 1.9rem; color: rgba(255,255,255,0.9); transition: var(--transition); }
+    .mobile-nav a:hover { color: var(--gold); }
+    .mobile-nav-close { position: absolute; top: 22px; right: 22px; color: rgba(255,255,255,0.7); font-size: 1.4rem; }
+
+    /* Hero */
+    .hero { position: relative; height: 100vh; min-height: 620px; display: flex; align-items: center; overflow: hidden; }
+    .hero-bg { position: absolute; inset: 0; background: url('https://ik.imagekit.io/vlvokmknvv/Deauvill/deauvill-resort.jpg?updatedAt=1748184001992') center/cover no-repeat; animation: heroZoom 14s ease-out forwards; will-change: transform; }
+    @keyframes heroZoom { from { transform: scale(1.08); } to { transform: scale(1.0); } }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(160deg, rgba(4,18,10,0.68) 0%, rgba(10,54,34,0.42) 55%, rgba(4,18,10,0.72) 100%); }
+    .hero-content { position: relative; z-index: 2; text-align: center; color: var(--white); max-width: 840px; margin: 0 auto; padding: 0 24px; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(201,169,110,0.18); border: 1px solid rgba(201,169,110,0.38); color: var(--gold-light); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; padding: 8px 20px; border-radius: 50px; margin-bottom: 28px; backdrop-filter: blur(8px); }
+    .hero-title { font-family: var(--serif); font-size: clamp(2.8rem, 7.5vw, 5.5rem); font-weight: 800; line-height: 1.05; margin-bottom: 22px; text-shadow: 0 2px 24px rgba(0,0,0,0.28); }
+    .hero-title em { font-style: italic; color: var(--gold-light); }
+    .hero-sub { font-size: clamp(1rem, 2.2vw, 1.22rem); font-weight: 300; color: rgba(255,255,255,0.85); max-width: 560px; margin: 0 auto 46px; line-height: 1.85; }
+    .hero-actions { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .hero-scroll { position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%); z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 6px; color: rgba(255,255,255,0.52); font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; animation: scrollBounce 2.2s ease-in-out infinite; }
+    @keyframes scrollBounce { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(9px); } }
+
+    /* Trust bar */
+    .trust-bar { background: var(--green-deep); padding: 28px 0; }
+    .trust-inner { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; }
+    .trust-item { text-align: center; padding: 8px 20px; border-right: 1px solid rgba(255,255,255,0.1); }
+    .trust-item:last-child { border-right: none; }
+    .trust-num { font-family: var(--serif); font-size: 2.1rem; font-weight: 700; color: var(--gold); display: block; line-height: 1; margin-bottom: 5px; }
+    .trust-lbl { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.58); }
+
+    /* About */
+    .about { background: var(--white); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .about-img-wrap { position: relative; }
+    .about-img-main { border-radius: var(--radius-lg); width: 100%; height: 500px; object-fit: cover; box-shadow: var(--shadow-lg); }
+    .about-img-accent { position: absolute; bottom: -28px; right: -28px; width: 180px; height: 180px; object-fit: cover; border-radius: var(--radius-md); border: 5px solid var(--white); box-shadow: var(--shadow-md); }
+    .about-badge { position: absolute; top: -18px; left: -18px; width: 90px; height: 90px; background: var(--green-deep); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--white); text-align: center; box-shadow: var(--shadow-md); }
+    .about-badge strong { font-family: var(--serif); font-size: 1.4rem; color: var(--gold); line-height: 1; }
+    .about-badge span { font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.7; }
+    .about-text h2 { font-family: var(--serif); font-size: clamp(1.9rem, 3.5vw, 2.7rem); color: var(--green-deep); margin-bottom: 20px; line-height: 1.2; }
+    .about-text p { color: var(--text-mid); margin-bottom: 18px; font-size: 1.03rem; }
+    .highlights { display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
+    .hi-item { display: flex; align-items: flex-start; gap: 14px; }
+    .hi-icon { width: 42px; height: 42px; background: var(--cream); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--green-mid); font-size: 0.95rem; }
+    .hi-text strong { display: block; font-weight: 600; color: var(--text-dark); font-size: 0.95rem; }
+    .hi-text span { font-size: 0.87rem; color: var(--text-muted); }
+
+    /* Rooms */
+    .rooms { background: var(--cream); }
+    .rooms-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
+    .room-card { background: var(--white); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition); position: relative; }
+    .room-card:hover { transform: translateY(-7px); box-shadow: var(--shadow-lg); }
+    .room-card.featured { outline: 2px solid var(--gold); }
+    .room-pop { position: absolute; top: 14px; right: 14px; background: var(--gold); color: var(--white); font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 13px; border-radius: 50px; z-index: 1; }
+    .room-img-wrap { overflow: hidden; }
+    .room-img { width: 100%; height: 210px; object-fit: cover; transition: transform 0.5s var(--ease); }
+    .room-card:hover .room-img { transform: scale(1.05); }
+    .room-body { padding: 26px; }
+    .room-type-lbl { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 7px; }
+    .room-name { font-family: var(--serif); font-size: 1.35rem; color: var(--green-deep); margin-bottom: 10px; }
+    .room-desc { font-size: 0.88rem; color: var(--text-muted); margin-bottom: 18px; line-height: 1.72; }
+    .room-pills { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 22px; }
+    .pill { display: flex; align-items: center; gap: 5px; font-size: 0.74rem; background: var(--cream); color: var(--text-mid); padding: 5px 11px; border-radius: 50px; }
+    .pill i { color: var(--green-mid); font-size: 0.68rem; }
+    .room-foot { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--cream-dark); padding-top: 18px; }
+    .room-price .amount { font-family: var(--serif); font-size: 1.9rem; color: var(--green-deep); font-weight: 700; }
+    .room-price .night { font-size: 0.78rem; color: var(--text-muted); }
+    .btn-sm { padding: 10px 18px !important; font-size: 0.82rem !important; }
+
+    /* Experiences */
+    .experiences { background: var(--green-deep); position: relative; overflow: hidden; }
+    .experiences::before { content: ''; position: absolute; top: -80px; right: -80px; width: 380px; height: 380px; background: radial-gradient(circle, rgba(201,169,110,0.07) 0%, transparent 68%); pointer-events: none; }
+    .experiences .section-header h2 { color: var(--white); }
+    .experiences .section-header .eyebrow { color: var(--gold); }
+    .experiences .section-header p { color: rgba(255,255,255,0.62); }
+    .experiences .gold-line { background: var(--gold); }
+    .exp-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+    .exp-card { background: rgba(255,255,255,0.055); border: 1px solid rgba(255,255,255,0.09); border-radius: var(--radius-md); padding: 34px 26px; backdrop-filter: blur(8px); transition: var(--transition); }
+    .exp-card:hover { background: rgba(255,255,255,0.09); border-color: rgba(201,169,110,0.28); transform: translateY(-4px); }
+    .exp-icon { width: 52px; height: 52px; border-radius: var(--radius-sm); background: rgba(201,169,110,0.14); display: flex; align-items: center; justify-content: center; margin-bottom: 18px; color: var(--gold); font-size: 1.3rem; }
+    .exp-card h3 { font-family: var(--serif); font-size: 1.1rem; color: var(--white); margin-bottom: 9px; }
+    .exp-card p { font-size: 0.88rem; color: rgba(255,255,255,0.58); line-height: 1.74; }
+
+    /* Testimonials */
+    .testimonials { background: var(--white); }
+    .reviews-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
+    .review-card { background: var(--cream); border-radius: var(--radius-md); padding: 30px; position: relative; transition: var(--transition); }
+    .review-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); }
+    .review-q { position: absolute; top: 18px; right: 22px; font-size: 2.8rem; color: var(--gold); opacity: 0.22; font-family: Georgia, serif; line-height: 1; }
+    .stars { display: flex; gap: 3px; color: #F59E0B; margin-bottom: 14px; font-size: 0.85rem; }
+    .review-text { font-size: 0.93rem; color: var(--text-mid); line-height: 1.82; margin-bottom: 18px; font-style: italic; }
+    .reviewer { display: flex; align-items: center; gap: 11px; }
+    .reviewer-av { width: 42px; height: 42px; border-radius: 50%; background: var(--green-mid); display: flex; align-items: center; justify-content: center; color: var(--white); font-weight: 700; font-size: 0.95rem; flex-shrink: 0; }
+    .reviewer-name { font-weight: 600; font-size: 0.87rem; color: var(--text-dark); }
+    .reviewer-loc { font-size: 0.76rem; color: var(--text-muted); }
+    .review-src { font-size: 0.72rem; color: var(--text-muted); display: flex; align-items: center; gap: 4px; margin-top: 2px; }
+    .review-src i { color: #4285F4; }
+
+    /* Gallery */
+    .gallery { background: var(--cream); }
+    .gallery-grid { display: grid; grid-template-columns: repeat(3,1fr); grid-template-rows: 240px 240px; gap: 14px; }
+    .g-item { position: relative; overflow: hidden; border-radius: var(--radius-md); cursor: zoom-in; }
+    .g-item.tall { grid-row: span 2; }
+    .g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s var(--ease); }
+    .g-item:hover img { transform: scale(1.07); }
+    .g-overlay { position: absolute; inset: 0; background: rgba(10,54,34,0); display: flex; align-items: flex-end; padding: 16px; transition: var(--transition); }
+    .g-item:hover .g-overlay { background: rgba(10,54,34,0.42); }
+    .g-label { color: var(--white); font-size: 0.88rem; font-weight: 500; opacity: 0; transform: translateY(7px); transition: var(--transition); }
+    .g-item:hover .g-label { opacity: 1; transform: translateY(0); }
+
+    /* Location */
+    .location { background: var(--white); }
+    .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    .location-text h2 { font-family: var(--serif); font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--green-deep); margin-bottom: 18px; line-height: 1.25; }
+    .location-text p { color: var(--text-muted); margin-bottom: 24px; line-height: 1.82; }
+    .dist-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+    .dist-item { display: flex; align-items: center; gap: 14px; padding: 14px 16px; background: var(--cream); border-radius: var(--radius-sm); }
+    .dist-icon { width: 38px; height: 38px; background: var(--green-deep); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 0.82rem; flex-shrink: 0; }
+    .dist-text strong { display: block; font-weight: 600; font-size: 0.9rem; }
+    .dist-text span { font-size: 0.8rem; color: var(--text-muted); }
+    .map-frame { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-md); height: 400px; }
+    .map-frame iframe { width: 100%; height: 100%; border: none; }
+
+    /* FAQ */
+    .faq { background: var(--cream); }
+    .faq-list { max-width: 740px; margin: 0 auto; display: flex; flex-direction: column; gap: 10px; }
+    .faq-item { background: var(--white); border-radius: var(--radius-sm); overflow: hidden; border: 1px solid var(--cream-dark); }
+    .faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: 19px 22px; font-family: var(--sans); font-size: 0.97rem; font-weight: 600; color: var(--text-dark); cursor: pointer; transition: color 0.25s; text-align: left; gap: 12px; }
+    .faq-q:hover { color: var(--green-mid); }
+    .faq-q i { color: var(--gold); font-size: 0.85rem; flex-shrink: 0; transition: transform 0.3s; }
+    .faq-item.open .faq-q i { transform: rotate(180deg); }
+    .faq-ans { max-height: 0; overflow: hidden; transition: max-height 0.38s ease; }
+    .faq-item.open .faq-ans { max-height: 260px; }
+    .faq-ans-inner { padding: 0 22px 18px; color: var(--text-muted); font-size: 0.93rem; line-height: 1.82; }
+
+    /* Contact */
+    .contact { background: var(--green-deep); position: relative; overflow: hidden; }
+    .contact::after { content: ''; position: absolute; bottom: -100px; left: -100px; width: 460px; height: 460px; background: radial-gradient(circle, rgba(201,169,110,0.065) 0%, transparent 65%); pointer-events: none; }
+    .contact .section-header h2 { color: var(--white); }
+    .contact .eyebrow { color: var(--gold); }
+    .contact .section-header p { color: rgba(255,255,255,0.62); }
+    .contact .gold-line { background: var(--gold); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+    .contact-info h3 { font-family: var(--serif); font-size: 1.75rem; color: var(--white); margin-bottom: 14px; }
+    .contact-info > p { color: rgba(255,255,255,0.67); margin-bottom: 28px; line-height: 1.82; }
+    .contact-list { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+    .contact-list li { display: flex; align-items: flex-start; gap: 14px; color: rgba(255,255,255,0.82); font-size: 0.95rem; }
+    .contact-list i { color: var(--gold); margin-top: 3px; flex-shrink: 0; }
+    .contact-list a { color: rgba(255,255,255,0.82); transition: color 0.25s; }
+    .contact-list a:hover { color: var(--gold); }
+    .contact-btns { display: flex; flex-direction: column; gap: 11px; margin-top: 28px; }
+    .booking-form { background: rgba(255,255,255,0.065); border: 1px solid rgba(255,255,255,0.11); border-radius: var(--radius-lg); padding: 36px; backdrop-filter: blur(12px); }
+    .booking-form h3 { font-family: var(--serif); font-size: 1.55rem; color: var(--white); margin-bottom: 24px; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label { display: block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 7px; }
+    .form-ctrl { width: 100%; padding: 13px 16px; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.13); border-radius: var(--radius-sm); color: var(--white); font-family: var(--sans); font-size: 0.93rem; transition: border-color 0.25s; outline: none; -webkit-appearance: none; }
+    .form-ctrl::placeholder { color: rgba(255,255,255,0.33); }
+    .form-ctrl:focus { border-color: var(--gold); background: rgba(255,255,255,0.11); }
+    .form-ctrl option { background: var(--green-deep); }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    /* Footer */
+    .footer { background: #03100A; color: rgba(255,255,255,0.58); padding: 60px 0 28px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; margin-bottom: 44px; }
+    .footer-logo { font-family: var(--serif); font-size: 1.5rem; color: var(--white); margin-bottom: 14px; display: block; }
+    .footer-logo span { color: var(--gold); }
+    .footer-brand p { font-size: 0.88rem; line-height: 1.8; margin-bottom: 18px; }
+    .socials { display: flex; gap: 10px; }
+    .social-a { width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.07); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.65); font-size: 0.85rem; transition: var(--transition); }
+    .social-a:hover { background: var(--gold); color: var(--white); transform: translateY(-2px); }
+    .footer-col h4 { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--white); margin-bottom: 18px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .footer-col ul a { font-size: 0.87rem; color: rgba(255,255,255,0.52); transition: color 0.25s; }
+    .footer-col ul a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.06); padding-top: 24px; display: flex; align-items: center; justify-content: space-between; font-size: 0.82rem; }
+
+    /* Floating */
+    .float-wa { position: fixed; bottom: 30px; right: 30px; z-index: 900; width: 58px; height: 58px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--white); font-size: 1.45rem; box-shadow: 0 4px 18px rgba(37,211,102,0.38); transition: var(--transition); animation: waPulse 3s ease-in-out infinite; }
+    .float-wa:hover { transform: scale(1.1); animation: none; box-shadow: 0 8px 28px rgba(37,211,102,0.5); }
+    @keyframes waPulse { 0%,100% { box-shadow: 0 4px 18px rgba(37,211,102,0.38), 0 0 0 0 rgba(37,211,102,0.38); } 60% { box-shadow: 0 4px 18px rgba(37,211,102,0.38), 0 0 0 12px rgba(37,211,102,0); } }
+    .float-book { position: fixed; bottom: 30px; left: 30px; z-index: 900; opacity: 0; transform: translateY(16px); transition: var(--transition); pointer-events: none; }
+    .float-book.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.72s var(--ease), transform 0.72s var(--ease); }
+    .reveal-l { opacity: 0; transform: translateX(-28px); transition: opacity 0.72s var(--ease), transform 0.72s var(--ease); }
+    .reveal-r { opacity: 0; transform: translateX(28px); transition: opacity 0.72s var(--ease), transform 0.72s var(--ease); }
+    .revealed { opacity: 1 !important; transform: none !important; }
+    .d1 { transition-delay: 0.1s; } .d2 { transition-delay: 0.2s; } .d3 { transition-delay: 0.3s; } .d4 { transition-delay: 0.4s; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .about-img-accent { display: none; }
+    }
+    @media (max-width: 768px) {
+      .section { padding: 60px 0; }
+      nav ul, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+      .trust-inner { grid-template-columns: repeat(2,1fr); }
+      .trust-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.09); }
+      .trust-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,0.09); }
+      .trust-item:nth-last-child(-n+2) { border-bottom: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-img-main { height: 280px; }
+      .about-badge { width: 76px; height: 76px; top: -14px; left: -14px; }
+      .rooms-grid { grid-template-columns: 1fr; }
+      .exp-grid { grid-template-columns: 1fr 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .g-item.tall { grid-row: span 1; }
+      .g-item img { height: 200px !important; }
+      .location-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-bottom { flex-direction: column; gap: 6px; text-align: center; }
+      .form-row { grid-template-columns: 1fr; }
+      .float-book { display: none; }
+      .hero-actions { flex-direction: column; align-items: center; }
+    }
+    @media (max-width: 480px) {
+      .exp-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body>
 
-    <nav class="bg-white shadow-lg p-4 sticky top-0 z-50 rounded-b-xl">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-3xl font-extrabold text-emerald-700 hover:text-emerald-900 transition-colors duration-300 transform hover:scale-105" onclick="showPage('home'); return false;">Deauvill Homestay</a>
-            
-            <div class="hidden md:flex space-x-8">
-                <a href="#" class="text-gray-700 hover:text-emerald-600 transition-colors duration-300 font-semibold text-lg py-2 px-3 rounded-md hover:bg-emerald-50" onclick="showPage('home'); return false;">Home</a>
-                <a href="#" class="text-gray-700 hover:text-emerald-600 transition-colors duration-300 font-semibold text-lg py-2 px-3 rounded-md hover:bg-emerald-50" onclick="showPage('gallery'); return false;">Gallery</a>
-                <a href="#" class="text-gray-700 hover:text-emerald-600 transition-colors duration-300 font-semibold text-lg py-2 px-3 rounded-md hover:bg-emerald-50" onclick="showPage('price'); return false;">Price</a>
-                <a href="#" class="text-gray-700 hover:text-emerald-600 transition-colors duration-300 font-semibold text-lg py-2 px-3 rounded-md hover:bg-emerald-50" onclick="showPage('about'); return false;">About</a>
-                <a href="#" class="text-gray-700 hover:text-emerald-600 transition-colors duration-300 font-semibold text-lg py-2 px-3 rounded-md hover:bg-emerald-50" onclick="showPage('contact'); return false;">Contact</a>
-            </div>
-            
-            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none p-2 rounded-md hover:bg-gray-100 transition-colors duration-300" aria-label="Toggle mobile menu">
-                <i class="fas fa-bars text-3xl"></i>
-            </button>
+<!-- Scarcity Banner -->
+<div class="scarcity-bar" role="alert">
+  <i class="fas fa-fire" aria-hidden="true"></i>
+  <span>Peak season filling fast — <strong>limited rooms</strong> for June &amp; July. <a href="#contact">Reserve yours →</a></span>
+</div>
+
+<!-- Navigation -->
+<header class="nav" id="nav" role="banner">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo" aria-label="Deauvill Homestay — back to top">Deauvill <span>Homestay</span></a>
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#rooms">Rooms</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="https://wa.me/919846923877?text=Hi%2C%20I%27d%20like%20to%20book%20a%20stay%20at%20Deauvill%20Homestay%20Varkala" class="btn btn-gold nav-cta" target="_blank" rel="noopener noreferrer" aria-label="Book your stay via WhatsApp">Book Now</a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-nav" id="mobileNav" role="dialog" aria-modal="true" aria-label="Site navigation">
+  <button class="mobile-nav-close" id="mobileClose" aria-label="Close menu"><i class="fas fa-times" aria-hidden="true"></i></button>
+  <a href="#about" class="mob-link">About</a>
+  <a href="#rooms" class="mob-link">Rooms &amp; Rates</a>
+  <a href="#gallery" class="mob-link">Gallery</a>
+  <a href="#location" class="mob-link">Location</a>
+  <a href="#contact" class="mob-link">Contact</a>
+  <a href="https://wa.me/919846923877?text=Hi%2C%20I%27d%20like%20to%20book%20a%20stay%20at%20Deauvill%20Homestay%20Varkala" class="btn btn-gold" target="_blank" rel="noopener noreferrer" style="margin-top:12px">Book on WhatsApp</a>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="home" aria-label="Deauvill Homestay Varkala — Welcome">
+  <div class="hero-bg" role="img" aria-label="Deauvill Homestay Varkala exterior"></div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+  <div class="hero-content">
+    <div class="hero-badge"><i class="fas fa-star" aria-hidden="true"></i> Varkala's Beloved Coastal Retreat</div>
+    <h1 class="hero-title">Where <em>Serenity</em><br>Meets the Sea</h1>
+    <p class="hero-sub">A boutique homestay in the heart of Varkala, Kerala — just 2 minutes from the beach. Warm hospitality, elegant rooms, and the timeless charm of coastal Kerala.</p>
+    <div class="hero-actions">
+      <a href="https://wa.me/919846923877?text=Hi%2C%20I%27d%20like%20to%20book%20a%20stay%20at%20Deauvill%20Homestay%20Varkala" class="btn btn-gold" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Book via WhatsApp</a>
+      <a href="#rooms" class="btn btn-outline">Explore Rooms <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true"><span>Discover</span><i class="fas fa-chevron-down"></i></div>
+</section>
+
+<!-- Trust Bar -->
+<div class="trust-bar" role="complementary" aria-label="Quick highlights">
+  <div class="container">
+    <div class="trust-inner">
+      <div class="trust-item"><strong class="trust-num">15+</strong><span class="trust-lbl">Years of Hospitality</span></div>
+      <div class="trust-item"><strong class="trust-num">2 min</strong><span class="trust-lbl">Walk to Beach</span></div>
+      <div class="trust-item"><strong class="trust-num">4.8 ★</strong><span class="trust-lbl">Guest Rating</span></div>
+      <div class="trust-item"><strong class="trust-num">₹1500</strong><span class="trust-lbl">Starting Per Night</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- About -->
+<section class="section about" id="about" aria-labelledby="about-h">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap reveal-l">
+        <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/deauvill-all.jpg?updatedAt=1748184002163" alt="Deauvill Homestay front view, Varkala Kerala" class="about-img-main" loading="lazy" width="560" height="500">
+        <div class="about-badge" aria-label="Established 2008"><strong>2008</strong><span>Est.</span></div>
+        <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/balcony.jpg?updatedAt=1748184001869" alt="Private balcony with garden view" class="about-img-accent" loading="lazy" width="180" height="180">
+      </div>
+      <div class="reveal-r">
+        <span class="eyebrow">Our Story</span>
+        <h2 id="about-h" style="font-family:var(--serif);font-size:clamp(1.9rem,3.5vw,2.7rem);color:var(--green-deep);margin-bottom:20px;line-height:1.2;">A Home Where Kerala's Heart Beats</h2>
+        <div class="gold-line gold-line-left"></div>
+        <p style="color:var(--text-mid);margin-bottom:16px;font-size:1.02rem;">Founded in 2008 by <strong>NG Pradeep</strong>, Deauvill Homestay was born from a simple dream: to share the warmth, beauty, and soul of Varkala with the world. What began as a family home has grown into a beloved destination for travellers seeking authentic Kerala hospitality.</p>
+        <p style="color:var(--text-mid);margin-bottom:24px;font-size:1.02rem;">Set against Kerala's lush greenery, our homestay is a sanctuary of calm — where the rhythm of life slows, the air smells of spice and sea, and every guest is treated as family.</p>
+        <div class="highlights">
+          <div class="hi-item"><div class="hi-icon" aria-hidden="true"><i class="fas fa-umbrella-beach"></i></div><div class="hi-text"><strong>Beachside Location</strong><span>Just a 2-minute stroll to Varkala's iconic clifftop beach</span></div></div>
+          <div class="hi-item"><div class="hi-icon" aria-hidden="true"><i class="fas fa-leaf"></i></div><div class="hi-text"><strong>Lush Green Surroundings</strong><span>Wake up to birdsong and tropical gardens every morning</span></div></div>
+          <div class="hi-item"><div class="hi-icon" aria-hidden="true"><i class="fas fa-hands-helping"></i></div><div class="hi-text"><strong>Genuine Kerala Hospitality</strong><span>Personalized care and local insights from your hosts</span></div></div>
         </div>
-        
-        <div id="mobile-menu" class="hidden md:hidden bg-white mt-4 rounded-lg shadow-lg">
-            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-md transition-colors duration-200 text-lg" onclick="showPage('home'); toggleMobileMenu(); return false;">Home</a>
-            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-md transition-colors duration-200 text-lg" onclick="showPage('gallery'); toggleMobileMenu(); return false;">Gallery</a>
-            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-md transition-colors duration-200 text-lg" onclick="showPage('price'); toggleMobileMenu(); return false;">Price</a>
-            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-md transition-colors duration-200 text-lg" onclick="showPage('about'); toggleMobileMenu(); return false;">About</a>
-            <a href="#" class="block px-4 py-3 text-gray-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-md transition-colors duration-200 text-lg" onclick="showPage('contact'); toggleMobileMenu(); return false;">Contact</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Rooms -->
+<section class="section rooms" id="rooms" aria-labelledby="rooms-h">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Accommodations</span>
+      <h2 id="rooms-h">Choose Your Perfect Room</h2>
+      <div class="gold-line"></div>
+      <p>Every room is thoughtfully designed for your comfort, with private balconies and complimentary Wi-Fi. Book direct for guaranteed best rates.</p>
+    </div>
+    <div class="rooms-grid">
+
+      <!-- Standard -->
+      <article class="room-card reveal d1" aria-label="Comfort Double Room">
+        <div class="room-img-wrap">
+          <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/room.jpg?updatedAt=1748184002134" alt="Comfort Double Room with private balcony at Deauvill Homestay Varkala" class="room-img" loading="lazy" width="400" height="210">
         </div>
-    </nav>
-
-    <main class="container mx-auto my-8 p-4">
-
-        <section id="home" class="page-content active bg-white rounded-xl shadow-2xl mb-12 overflow-hidden">
-            <div class="hero-section text-white py-20 md:py-32 text-center relative rounded-t-xl">
-                <div class="hero-overlay"></div>
-                <div class="relative z-10 px-4">
-                    <h1 class="text-5xl md:text-7xl font-extrabold mb-6 animate-fade-in-down drop-shadow-lg">Deauvill Homestay</h1>
-                    <p class="text-xl md:text-3xl font-light mb-10 animate-fade-in-up drop-shadow-md">Your tranquil haven amidst the beauty of Varkala, Kerala.</p>
-                    <button class="btn-gradient text-white font-bold py-4 px-10 rounded-full shadow-xl text-lg transition-all duration-300 animate-fade-in-up" style="animation-delay: 0.4s;" onclick="showPage('contact'); return false;">
-                        Book Your Serene Escape <i class="fas fa-calendar-alt ml-3"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="p-8 md:p-12">
-                <div class="grid md:grid-cols-2 gap-10 items-center mb-12">
-                    <div class="animate-slide-in-left">
-                        <h2 class="text-4xl font-bold text-emerald-700 mb-6">Discover Your Perfect Getaway</h2>
-                        <p class="text-gray-700 leading-relaxed text-lg mb-4">
-                            Nestled amidst the lush greenery and tranquil backwaters of Varkala, Deauvill Homestay offers a perfect blend of comfort and natural beauty.
-                            Whether you're seeking a peaceful retreat, an adventurous exploration of the local culture, or simply a relaxing getaway, our homestay provides an idyllic setting.
-                        </p>
-                        <p class="text-gray-700 leading-relaxed text-lg">
-                            Enjoy spacious, elegantly designed rooms, authentic local cuisine prepared with fresh ingredients, and personalized hospitality that makes you feel right at home. We are just a short distance from Varkala's famous cliffs, pristine beaches, and vibrant local markets.
-                        </p>
-                        <button class="mt-8 btn-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg transition-all duration-300" onclick="showPage('about'); return false;">
-                            Learn More About Us <i class="fas fa-info-circle ml-2"></i>
-                        </button>
-                    </div>
-                    <div class="animate-slide-in-right">
-                        <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/deauvill-resort.jpg?updatedAt=1748184001992" alt="Deauvill Homestay Interior Lounge" class="w-full h-auto rounded-xl shadow-xl transform transition-transform duration-500 hover:scale-102">
-                    </div>
-                </div>
-
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-emerald-700 mb-8">Why Choose Deauvill?</h2>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                        <div class="bg-emerald-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 animate-fade-in" style="animation-delay: 0.6s;">
-                            <i class="fas fa-bed text-5xl text-emerald-600 mb-4"></i>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Comfortable Accommodations</h3>
-                            <p class="text-gray-600">Spacious and well-appointed rooms designed for your utmost relaxation.</p>
-                        </div>
-                        <!-- <div class="bg-emerald-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 animate-fade-in" style="animation-delay: 0.8s;">
-                            <i class="fas fa-utensils text-5xl text-emerald-600 mb-4"></i>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Authentic Local Cuisine</h3>
-                            <p class="text-gray-600">Savor delicious homemade Kerala dishes, made with fresh, local ingredients.</p>
-                        </div> -->
-                        <div class="bg-emerald-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 animate-fade-in" style="animation-delay: 0.8s;">
-                            <i class="fas fa-umbrella-beach text-5xl text-emerald-600 mb-4"></i>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Unbeatable Beach Proximity</h3>
-                            <p class="text-gray-600">Enjoy the sun and sand with just a 2-minute leisurely walk to Varkala's stunning beach.</p>
-                        </div>
-                        <div class="bg-emerald-50 p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 animate-fade-in" style="animation-delay: 1s;">
-                            <i class="fas fa-leaf text-5xl text-emerald-600 mb-4"></i>
-                            <h3 class="text-xl font-semibold text-gray-800 mb-2">Serene Natural Surroundings</h3>
-                            <p class="text-gray-600">Enjoy the peaceful ambiance of our lush gardens and proximity to nature.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="gallery" class="page-content bg-white p-8 rounded-xl shadow-2xl mb-12">
-            <h1 class="text-4xl font-extrabold text-emerald-700 mb-10 text-center animate-fade-in-down">A Glimpse of Deauvill</h1>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="gallery-item animate-fade-in" style="animation-delay: 0.2s;">
-                    <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/deauvill-resort.jpg?updatedAt=1748184001992" alt="Homestay Room 1" class="w-full h-64 object-cover">
-                    <div class="overlay"><p>Cozy Bedroom</p></div>
-                </div>
-                <div class="gallery-item animate-fade-in" style="animation-delay: 0.4s;">
-                    <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/balcony.jpg?updatedAt=1748184001869" alt="Homestay Balcony Area" class="w-full h-64 object-cover">
-                    <div class="overlay"><p>Balcony</p></div>
-                </div>
-                <div class="gallery-item animate-fade-in" style="animation-delay: 0.6s;">
-                    <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/room.jpg?updatedAt=1748184002134" alt="Homestay Room 1" class="w-full h-64 object-cover">
-                    <div class="overlay"><p>Cozy Bedroom</p></div>
-                </div>
-                <div class="gallery-item animate-fade-in" style="animation-delay: 0.8s;">
-                    <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/deauvill-all.jpg?updatedAt=1748184002163" alt="Homestay Exterior" class="w-full h-64 object-cover">
-                    <div class="overlay"><p>Charming Exterior</p></div>
-                </div>
-                <div class="gallery-item animate-fade-in" style="animation-delay: 1s;">
-                    <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/allview.jpg?updatedAt=1748186154544" alt="Homestay Exterior" class="w-full h-64 object-cover">
-                    <div class="overlay"><p>Charming Exterior</p></div>
-                </div>
-                <div class="gallery-item animate-fade-in" style="animation-delay: 1.2s;">
-                    <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/balcony.jpg?updatedAt=1748186211536" alt="Homestay Balcony Area" class="w-full h-64 object-cover">
-                    <div class="overlay"><p>Private Balcony</p></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="price" class="page-content bg-white p-8 rounded-xl shadow-2xl mb-12">
-            <h1 class="text-4xl font-extrabold text-emerald-700 mb-10 text-center animate-fade-in-down">Our Accommodation & Pricing</h1>
-            <div class="overflow-x-auto rounded-lg shadow-lg">
-                <table class="min-w-full bg-white pricing-table">
-                    <thead>
-                        <tr>
-                            <th class="py-4 px-6 text-left text-lg font-semibold rounded-tl-lg">Room Type</th>
-                            <th class="py-4 px-6 text-left text-lg font-semibold">Capacity</th>
-                            <th class="py-4 px-6 text-left text-lg font-semibold">Key Amenities</th>
-                            <th class="py-4 px-6 text-left text-lg font-semibold rounded-tr-lg">Price per Night (INR)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="animate-fade-in-up" style="animation-delay: 0.2s;">
-                            <td class="py-4 px-6">Standard Double Room</td>
-                            <td class="py-4 px-6">2 Guests</td>
-                            <td class="py-4 px-6">Private Balcony, Wi-Fi</td>
-                            <td class="py-4 px-6 font-bold text-emerald-700 text-xl">₹ 1500</td>
-                        </tr>
-                        <tr class="animate-fade-in-up" style="animation-delay: 0.4s;">
-                            <td class="py-4 px-6">Deluxe Double Room</td>
-                            <td class="py-4 px-6">2 Guests</td>
-                            <td class="py-4 px-6">Private Balcony, Wi-Fi</td>
-                            <td class="py-4 px-6 font-bold text-emerald-700 text-xl">₹ 2000</td>
-                        </tr>
-                        <tr class="animate-fade-in-up" style="animation-delay: 0.6s;">
-                            <td class="py-4 px-6">AC Room</td>
-                            <td class="py-4 px-6">2 Guests</td>
-                            <td class="py-4 px-6">AC, Private Balcony, Wi-Fi</td>
-                            <td class="py-4 px-6 font-bold text-emerald-700 text-xl">₹ 2500</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="text-center text-gray-600 mt-8 text-md">
-                *Prices are indicative and subject to change based on seasonality, demand, and special events. Please contact us directly for the most current rates, availability, and exclusive package deals.
-            </p>
-            <div class="text-center mt-8">
-                <button class="btn-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg transition-all duration-300" onclick="showPage('contact'); return false;">
-                    Check Availability <i class="fas fa-calendar-check ml-2"></i>
-                </button>
-            </div>
-        </section>
-
-        <section id="about" class="page-content bg-white p-8 rounded-xl shadow-2xl mb-12">
-            <h1 class="text-4xl font-extrabold text-emerald-700 mb-10 text-center animate-fade-in-down">Our Story & Philosophy</h1>
-            <div class="prose max-w-none text-gray-700 text-lg leading-relaxed">
-                <div class="grid md:grid-cols-2 gap-8 items-center mb-8">
-                    <div class="animate-slide-in-left">
-                        <p class="mb-4">
-                            Deauvill Homestay is more than just a place to stay; it's a heartfelt endeavor to share the warmth and authenticity of Kerala with travelers from around the globe.
-                Established in <strong>2008</strong> by <strong>NG Pradeep</strong>, our homestay was born from a passion for genuine hospitality and a deep love for Varkala's serene beauty.
-                        </p>
-                        <p class="mb-4">
-                            Our philosophy is simple: to create a home-away-from-home experience where every guest feels cherished and connected to the local culture. We primarily offer comfortable stays,
-                and for our valued long-term guests, we provide access to a shared kitchen facility. We believe in personalized service,
-                attending to the unique needs of each visitor, and offering genuine insights into the vibrant life of Varkala.
-                We strive to make your stay truly memorable and enriching
-                        </p>
-                    </div>
-                    <div class="animate-slide-in-right">
-                        <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/logo.jpg?updatedAt=1748184811592" alt="Homestay Family" class="w-full h-auto rounded-xl shadow-lg">
-                    </div>
-                </div>
-
-                <h2 class="text-3xl font-semibold text-emerald-600 mt-10 mb-5 flex items-center animate-fade-in-up" style="animation-delay: 0.2s;"><i class="fas fa-map-marked-alt mr-4 text-4xl"></i>Our Idyllic Location: Varkala, Kerala</h2>
-                <p class="mb-4">
-                    Varkala, a jewel on the Arabian Sea coast, is a serene coastal town in the southern part of Kerala, India. It's globally renowned for its distinctive cliff formations,
-        pristine golden beaches, and natural mineral springs believed to have medicinal properties. It's a magnet for spiritual seekers, beach enthusiasts, and those
-        seeking rejuvenating Ayurvedic treatments and tranquil yoga retreats.
-                </p>
-                <p class="mb-4">
-                    Deauvill Homestay boasts a truly prime location. We are just a <strong>2-minute</strong> walk from the beautiful Varkala beach**, offering unparalleled convenience for your seaside adventures.
-        Furthermore, our homestay is within easy walking distance of supermarkets, various shops, and a wide array of restaurants, ensuring all your daily needs and culinary desires are met effortlessly.
-        The Varkala Railway Station is also conveniently located just <strong>3.5 km away</strong>.
-                </p>
-
-                <h2 class="text-3xl font-semibold text-emerald-600 mt-10 mb-5 flex items-center animate-fade-in-up" style="animation-delay: 0.4s;"><i class="fas fa-handshake-alt-slash mr-4 text-4xl"></i>Our Commitment to You</h2>
-                <p class="mb-4">
-                    We are deeply committed to fostering sustainable tourism practices, actively supporting local communities, and diligently preserving the breathtaking natural beauty of Varkala.
-                    Every aspect of our homestay is designed with environmental consciousness and community well-being in mind.
-                </p>
-                <p>
-                    We warmly invite you to embark on a journey with us and experience the true essence of Kerala – its vibrant culture, its tranquil landscapes, and its unparalleled hospitality.
-        Come, be a part of our family at Deauvill Homestay.
-                </p>
-            </div>
-        </section>
-
-        <section id="contact" class="page-content bg-white p-8 rounded-xl shadow-2xl mb-12">
-            <h1 class="text-4xl font-extrabold text-emerald-700 mb-10 text-center animate-fade-in-down">Connect With Us</h1>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="animate-slide-in-left">
-                    <h2 class="text-3xl font-semibold text-emerald-600 mb-6">Reach Out to Deauvill</h2>
-                    <p class="text-gray-700 text-lg mb-8 leading-relaxed">
-                        We are eager to assist you with your booking, answer any questions, or help with special arrangements. Your memorable stay begins here!
-                    </p>
-                    <div class="space-y-6">
-                        <p class="flex items-center text-gray-700 text-xl">
-                            <i class="fas fa-map-marker-alt text-emerald-600 mr-5 text-2xl"></i>
-                            Deauvill home stay, Thiruvambadi Rd, opposite Nikhil ayurvedic heritage, Varkala, Kerala, India - 695141
-                        </p>
-                        <p class="flex items-center text-gray-700 text-xl">
-                            <i class="fas fa-phone-alt text-emerald-600 mr-5 text-2xl"></i>
-                            <a href="tel:+919876543210" class="hover:underline font-medium">+91 98469 23877</a>
-                        </p>
-                        <p class="flex items-center text-gray-700 text-xl">
-                            <i class="fas fa-envelope text-emerald-600 mr-5 text-2xl"></i>
-                            <a href="mailto:info@deauvillhomestay.com" class="hover:underline font-medium">info@deauvillhomestay.com</a>
-                        </p>
-                        <p class="flex items-center text-gray-700 text-xl">
-                            <i class="fas fa-globe text-emerald-600 mr-5 text-2xl"></i>
-                            <span class="font-medium">www.deauvillhomestay.com</span>
-                        </p>
-                    </div>
-
-                    <h2 class="text-3xl font-semibold text-emerald-600 mt-12 mb-5">Locate Us Easily</h2>
-                    <p class="text-gray-700 text-lg mb-6">
-                        While we can't embed a live interactive map here, you can find our precise location on Google Maps using the link below.
-                    </p>
-                    <a href="https://maps.app.goo.gl/WExFQ8sgijJHnibP9" target="_blank" class="inline-block btn-gradient text-white font-bold py-3 px-8 rounded-full shadow-lg text-lg transition-all duration-300 mb-8">
-                        Get Directions <i class="fas fa-location-arrow ml-3"></i>
-                    </a>
-                    <!-- <img src="https://placehold.co/600x350/2E8B57/FFFFFF?text=Varkala+Map+Location" alt="Map Placeholder for Deauvill Homestay" class="w-full h-auto rounded-xl shadow-md"> -->
-                </div>
-
-                <div class="animate-slide-in-right">
-                    <h2 class="text-3xl font-semibold text-emerald-600 mb-6">Send Us a Message</h2>
-                    <form class="space-y-7 p-6 bg-emerald-50 rounded-xl shadow-inner">
-                        <div>
-                            <label for="name" class="block text-gray-800 text-base font-bold mb-2">Your Name:</label>
-                            <input type="text" id="name" name="name" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-3 focus:ring-emerald-400 focus:border-emerald-500 transition-all duration-200 text-lg" placeholder="Enter your full name" aria-label="Your Name">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-gray-800 text-base font-bold mb-2">Your Email:</label>
-                            <input type="email" id="email" name="email" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-3 focus:ring-emerald-400 focus:border-emerald-500 transition-all duration-200 text-lg" placeholder="your.email@example.com" aria-label="Your Email">
-                        </div>
-                        <div>
-                            <label for="subject" class="block text-gray-800 text-base font-bold mb-2">Subject:</label>
-                            <input type="text" id="subject" name="subject" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-3 focus:ring-emerald-400 focus:border-emerald-500 transition-all duration-200 text-lg" placeholder="Regarding your stay or inquiry" aria-label="Subject">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-gray-800 text-base font-bold mb-2">Your Message:</label>
-                            <textarea id="message" name="message" rows="7" class="shadow-sm appearance-none border border-gray-300 rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-3 focus:ring-emerald-400 focus:border-emerald-500 transition-all duration-200 text-lg" placeholder="Type your detailed message here..." aria-label="Your Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn-gradient text-white font-bold py-3 px-10 rounded-full shadow-lg text-lg transition-all duration-300">
-                            Send Message <i class="fas fa-paper-plane ml-3"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-emerald-950 text-white p-8 text-center rounded-t-xl shadow-inner mt-12">
-        <div class="container mx-auto">
-            <p class="text-lg mb-3">© 2025 Deauvill Homestay. All rights reserved.</p>
-            <p class="text-md">Crafted with <i class="fas fa-heart text-red-500 animate-pulse"></i> in the serene landscapes of Varkala, Kerala.</p>
-            <div class="flex justify-center space-x-6 mt-6">
-                <a href="#" class="text-white hover:text-emerald-400 transition-colors duration-300 text-2xl" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="text-white hover:text-emerald-400 transition-colors duration-300 text-2xl" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="text-white hover:text-emerald-400 transition-colors duration-300 text-2xl" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            </div>
+        <div class="room-body">
+          <p class="room-type-lbl">Standard</p>
+          <h3 class="room-name">Comfort Double Room</h3>
+          <p class="room-desc">A cozy, well-appointed room with warm décor and a private balcony overlooking the garden. Perfect for couples and solo travellers.</p>
+          <div class="room-pills">
+            <span class="pill"><i class="fas fa-wifi" aria-hidden="true"></i> Free Wi-Fi</span>
+            <span class="pill"><i class="fas fa-door-open" aria-hidden="true"></i> Private Balcony</span>
+            <span class="pill"><i class="fas fa-users" aria-hidden="true"></i> Up to 2 Guests</span>
+          </div>
+          <div class="room-foot">
+            <div class="room-price"><span class="amount">₹1,500</span><span class="night"> /night</span></div>
+            <a href="https://wa.me/919846923877?text=Hi%2C%20I%27d%20like%20to%20book%20the%20Standard%20Double%20Room%20at%20Deauvill%20Homestay%20Varkala" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Book Now</a>
+          </div>
         </div>
-    </footer>
+      </article>
 
-    <script>
-        /**
-         * Toggles the visibility of different content sections (pages) on the website.
-         * Only the specified page will be visible, others will be hidden.
-         * Scrolls the window to the top after changing the page.
-         * @param {string} pageId - The ID of the page section to show (e.g., 'home', 'gallery').
-         */
-        function showPage(pageId) {
-            // Get all elements with the class 'page-content'
-            const pages = document.querySelectorAll('.page-content');
-            // Iterate over each page and remove the 'active' class (hiding them)
-            pages.forEach(page => {
-                page.classList.remove('active');
-            });
-            // Add the 'active' class to the specified page (showing it)
-            document.getElementById(pageId).classList.add('active');
-            // Scroll to the top of the window with a smooth animation
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
+      <!-- Deluxe -->
+      <article class="room-card featured reveal d2" aria-label="Deluxe Double Room — Most Popular">
+        <div class="room-pop">Most Popular</div>
+        <div class="room-img-wrap">
+          <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/deauvill-resort.jpg?updatedAt=1748184001992" alt="Deluxe Double Room at Deauvill Homestay, spacious with garden balcony" class="room-img" loading="lazy" width="400" height="210">
+        </div>
+        <div class="room-body">
+          <p class="room-type-lbl">Deluxe</p>
+          <h3 class="room-name">Deluxe Double Room</h3>
+          <p class="room-desc">Our most-loved room — spacious with premium furnishings and a private balcony. The ideal choice for a memorable Kerala escape.</p>
+          <div class="room-pills">
+            <span class="pill"><i class="fas fa-wifi" aria-hidden="true"></i> Free Wi-Fi</span>
+            <span class="pill"><i class="fas fa-door-open" aria-hidden="true"></i> Private Balcony</span>
+            <span class="pill"><i class="fas fa-users" aria-hidden="true"></i> Up to 2 Guests</span>
+          </div>
+          <div class="room-foot">
+            <div class="room-price"><span class="amount">₹2,000</span><span class="night"> /night</span></div>
+            <a href="https://wa.me/919846923877?text=Hi%2C%20I%27d%20like%20to%20book%20the%20Deluxe%20Double%20Room%20at%20Deauvill%20Homestay%20Varkala" class="btn btn-gold btn-sm" target="_blank" rel="noopener noreferrer">Book Now</a>
+          </div>
+        </div>
+      </article>
 
-        // Get references to the mobile menu button and the mobile menu itself
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+      <!-- AC Room -->
+      <article class="room-card reveal d3" aria-label="AC Premium Room">
+        <div class="room-img-wrap">
+          <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/balcony.jpg?updatedAt=1748184001869" alt="AC Premium Room balcony view at Deauvill Homestay Varkala" class="room-img" loading="lazy" width="400" height="210">
+        </div>
+        <div class="room-body">
+          <p class="room-type-lbl">Premium</p>
+          <h3 class="room-name">AC Premium Room</h3>
+          <p class="room-desc">Stay cool in Kerala's warmth. Our air-conditioned room offers maximum comfort, a private balcony, and everything you need for a luxurious stay.</p>
+          <div class="room-pills">
+            <span class="pill"><i class="fas fa-snowflake" aria-hidden="true"></i> Air Conditioning</span>
+            <span class="pill"><i class="fas fa-wifi" aria-hidden="true"></i> Free Wi-Fi</span>
+            <span class="pill"><i class="fas fa-door-open" aria-hidden="true"></i> Private Balcony</span>
+          </div>
+          <div class="room-foot">
+            <div class="room-price"><span class="amount">₹2,500</span><span class="night"> /night</span></div>
+            <a href="https://wa.me/919846923877?text=Hi%2C%20I%27d%20like%20to%20book%20the%20AC%20Premium%20Room%20at%20Deauvill%20Homestay%20Varkala" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Book Now</a>
+          </div>
+        </div>
+      </article>
 
-        /**
-         * Toggles the 'hidden' class on the mobile menu, showing or hiding it.
-         */
-        function toggleMobileMenu() {
-            mobileMenu.classList.toggle('hidden');
-        }
+    </div>
+    <p class="reveal" style="text-align:center;margin-top:28px;color:var(--text-muted);font-size:0.88rem;">* Prices may vary by season. Contact us for current rates, packages &amp; availability.</p>
+  </div>
+</section>
 
-        // Add an event listener to the mobile menu button to call toggleMobileMenu on click
-        mobileMenuButton.addEventListener('click', toggleMobileMenu);
+<!-- Experiences -->
+<section class="section experiences" aria-labelledby="exp-h">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Varkala Life</span>
+      <h2 id="exp-h">Immersive Experiences Await</h2>
+      <div class="gold-line"></div>
+      <p>From ancient cliff-top temples to sun-soaked beaches, Varkala offers unforgettable moments — all just steps from your room.</p>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card reveal d1"><div class="exp-icon" aria-hidden="true"><i class="fas fa-water"></i></div><h3>Varkala Cliff Beach</h3><p>A 2-minute walk to Kerala's most iconic laterite cliff beach — swim, surf, or watch the sun sink into the Arabian Sea.</p></div>
+      <div class="exp-card reveal d2"><div class="exp-icon" aria-hidden="true"><i class="fas fa-spa"></i></div><h3>Ayurvedic Wellness</h3><p>Rejuvenate at world-class Ayurvedic centres steps from our door. Kerala's ancient healing traditions are right here.</p></div>
+      <div class="exp-card reveal d3"><div class="exp-icon" aria-hidden="true"><i class="fas fa-place-of-worship"></i></div><h3>Janardhana Swami Temple</h3><p>Visit the 2,000-year-old cliffside temple — one of Kerala's most sacred and architecturally stunning pilgrimage sites.</p></div>
+      <div class="exp-card reveal d1"><div class="exp-icon" aria-hidden="true"><i class="fas fa-fish"></i></div><h3>Fresh Seafood &amp; Local Cuisine</h3><p>Cliff-top restaurants serve catch-of-the-day seafood, Kerala fish curry, and freshly brewed chai.</p></div>
+      <div class="exp-card reveal d2"><div class="exp-icon" aria-hidden="true"><i class="fas fa-shopping-basket"></i></div><h3>Local Markets &amp; Shopping</h3><p>Explore vibrant local markets, spice stalls, and artisan shops — all within easy walking distance.</p></div>
+      <div class="exp-card reveal d3"><div class="exp-icon" aria-hidden="true"><i class="fas fa-sun"></i></div><h3>Yoga &amp; Sunrise Sessions</h3><p>Join cliff-top yoga sessions as the sun rises over the sea — a ritual you'll carry home forever.</p></div>
+    </div>
+  </div>
+</section>
 
-        // Event listener for when the DOM content is fully loaded
-        document.addEventListener('DOMContentLoaded', () => {
-            // Show the 'home' page by default when the website loads
-            showPage('home');
-        });
-    </script>
+<!-- Testimonials -->
+<section class="section testimonials" aria-labelledby="reviews-h">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Guest Stories</span>
+      <h2 id="reviews-h">What Our Guests Say</h2>
+      <div class="gold-line"></div>
+      <p>Hear from travellers who have discovered the magic of Deauvill Homestay.</p>
+    </div>
+    <div class="reviews-grid">
+      <article class="review-card reveal d1">
+        <span class="review-q" aria-hidden="true">"</span>
+        <div class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="review-text">"Deauvill was everything we hoped for and more. The room was spotless, the balcony view magical, and Pradeep sir treated us like family. The beach is literally 2 minutes away. We'll be back every year!"</p>
+        <div class="reviewer"><div class="reviewer-av" aria-hidden="true">A</div><div><p class="reviewer-name">Ananya Krishnan</p><p class="reviewer-loc">Bangalore, India</p><div class="review-src"><i class="fab fa-google" aria-hidden="true"></i> Google Review</div></div></div>
+      </article>
+      <article class="review-card reveal d2">
+        <span class="review-q" aria-hidden="true">"</span>
+        <div class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="review-text">"Exceptional value. The AC room was cool, clean, and comfortable. The hosts gave us the best tips for exploring Varkala. Perfect for couples and families — highly recommend booking directly!"</p>
+        <div class="reviewer"><div class="reviewer-av" aria-hidden="true">R</div><div><p class="reviewer-name">Rahul &amp; Meera</p><p class="reviewer-loc">Mumbai, India</p><div class="review-src"><i class="fab fa-google" aria-hidden="true"></i> Google Review</div></div></div>
+      </article>
+      <article class="review-card reveal d3">
+        <span class="review-q" aria-hidden="true">"</span>
+        <div class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+        <p class="review-text">"I've stayed at many Kerala homestays, but Deauvill stands apart. The charm of the place, beach proximity, and genuine warmth of the family make this truly special. Book it — you won't regret it."</p>
+        <div class="reviewer"><div class="reviewer-av" aria-hidden="true">S</div><div><p class="reviewer-name">Suresh Pillai</p><p class="reviewer-loc">Thiruvananthapuram, Kerala</p><div class="review-src"><i class="fab fa-google" aria-hidden="true"></i> Google Review</div></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="section gallery" id="gallery" aria-labelledby="gallery-h">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Photo Gallery</span>
+      <h2 id="gallery-h">A Glimpse of Deauvill</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="gallery-grid">
+      <div class="g-item tall reveal">
+        <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/deauvill-resort.jpg?updatedAt=1748184001992" alt="Deauvill Homestay main building, Varkala Kerala" loading="lazy" width="380" height="480">
+        <div class="g-overlay"><span class="g-label">Deauvill Homestay</span></div>
+      </div>
+      <div class="g-item reveal d1">
+        <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/balcony.jpg?updatedAt=1748184001869" alt="Private balcony with garden view at Deauvill Homestay" loading="lazy" width="380" height="240" style="height:240px;object-fit:cover;">
+        <div class="g-overlay"><span class="g-label">Private Balcony</span></div>
+      </div>
+      <div class="g-item reveal d2">
+        <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/room.jpg?updatedAt=1748184002134" alt="Comfortable bedroom at Deauvill Homestay Varkala" loading="lazy" width="380" height="240" style="height:240px;object-fit:cover;">
+        <div class="g-overlay"><span class="g-label">Cozy Bedrooms</span></div>
+      </div>
+      <div class="g-item reveal d1">
+        <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/deauvill-all.jpg?updatedAt=1748184002163" alt="Deauvill Homestay property view from outside" loading="lazy" width="380" height="240" style="height:240px;object-fit:cover;">
+        <div class="g-overlay"><span class="g-label">Property View</span></div>
+      </div>
+      <div class="g-item reveal d2">
+        <img src="https://ik.imagekit.io/vlvokmknvv/Deauvill/allview.jpg?updatedAt=1748186154544" alt="Scenic surroundings of Deauvill Homestay, Varkala" loading="lazy" width="380" height="240" style="height:240px;object-fit:cover;">
+        <div class="g-overlay"><span class="g-label">Scenic Surroundings</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Location -->
+<section class="section location" id="location" aria-labelledby="location-h">
+  <div class="container">
+    <div class="location-grid">
+      <div class="reveal-l">
+        <span class="eyebrow">Find Us</span>
+        <h2 id="location-h" style="font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.4rem);color:var(--green-deep);margin-bottom:16px;line-height:1.25;">Perfectly Located<br>in Varkala</h2>
+        <div class="gold-line gold-line-left"></div>
+        <p style="color:var(--text-muted);margin-bottom:22px;line-height:1.82;">Nestled in the heart of Varkala, we are ideally placed for exploring the beach, the cliffs, the temples, and the vibrant local life — all within easy reach.</p>
+        <ul class="dist-list" aria-label="Distances from Deauvill Homestay">
+          <li class="dist-item"><div class="dist-icon" aria-hidden="true"><i class="fas fa-umbrella-beach"></i></div><div class="dist-text"><strong>Varkala Cliff Beach</strong><span>2-minute walk</span></div></li>
+          <li class="dist-item"><div class="dist-icon" aria-hidden="true"><i class="fas fa-store"></i></div><div class="dist-text"><strong>Shops &amp; Restaurants</strong><span>Walking distance</span></div></li>
+          <li class="dist-item"><div class="dist-icon" aria-hidden="true"><i class="fas fa-train"></i></div><div class="dist-text"><strong>Varkala Railway Station</strong><span>3.5 km away</span></div></li>
+          <li class="dist-item"><div class="dist-icon" aria-hidden="true"><i class="fas fa-plane"></i></div><div class="dist-text"><strong>Trivandrum Airport</strong><span>~50 km · approx. 1 hour</span></div></li>
+        </ul>
+        <a href="https://maps.app.goo.gl/WExFQ8sgijJHnibP9" class="btn btn-primary" target="_blank" rel="noopener noreferrer" aria-label="Get directions to Deauvill Homestay on Google Maps"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Get Directions</a>
+      </div>
+      <div class="map-frame reveal-r" aria-label="Map of Deauvill Homestay location">
+        <iframe src="https://maps.google.com/maps?q=Deauvill+Homestay+Varkala+Kerala&output=embed" title="Deauvill Homestay location on Google Maps" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" aria-labelledby="faq-h">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Common Questions</span>
+      <h2 id="faq-h">Frequently Asked Questions</h2>
+      <div class="gold-line"></div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">How far is Deauvill Homestay from Varkala beach?<i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+        <div class="faq-ans" role="region"><p class="faq-ans-inner">Deauvill Homestay is just a 2-minute leisurely walk from Varkala beach — one of the closest stays to the shore. You can hear the waves from your balcony and be on the sand in minutes.</p></div>
+      </div>
+      <div class="faq-item reveal d1">
+        <button class="faq-q" aria-expanded="false">What are the check-in and check-out times?<i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+        <div class="faq-ans" role="region"><p class="faq-ans-inner">Check-in is from 12:00 PM and check-out by 11:00 AM. Early check-in or late check-out can be arranged based on availability — just let us know and we'll do our best.</p></div>
+      </div>
+      <div class="faq-item reveal d2">
+        <button class="faq-q" aria-expanded="false">Is it cheaper to book directly with you?<i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+        <div class="faq-ans" role="region"><p class="faq-ans-inner">Yes — always. Booking via WhatsApp (+91 98469 23877) or email gives you our best rates with no OTA commission markups. Direct guests also enjoy more flexibility on dates and cancellations.</p></div>
+      </div>
+      <div class="faq-item reveal d3">
+        <button class="faq-q" aria-expanded="false">What amenities are included?<i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+        <div class="faq-ans" role="region"><p class="faq-ans-inner">All rooms include complimentary Wi-Fi and private balconies. The AC Premium Room has air conditioning. Long-term guests have shared kitchen access. Shops, restaurants, and Ayurvedic centres are steps away.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-q" aria-expanded="false">Is Deauvill Homestay suitable for families?<i class="fas fa-chevron-down" aria-hidden="true"></i></button>
+        <div class="faq-ans" role="region"><p class="faq-ans-inner">Absolutely. The peaceful environment, proximity to the beach, and home-like atmosphere make Deauvill Homestay a wonderful choice for families travelling with children of all ages.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="section contact" id="contact" aria-labelledby="contact-h">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="eyebrow">Get In Touch</span>
+      <h2 id="contact-h">Ready to Book Your Stay?</h2>
+      <div class="gold-line"></div>
+      <p>Reach out directly for the best rates, availability, and personalized assistance. We respond within 2 hours.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info reveal-l">
+        <h3>Let's Plan Your Perfect Kerala Escape</h3>
+        <p>We respond to every inquiry personally. Direct bookings always get the best available rate.</p>
+        <ul class="contact-list">
+          <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i><span>Thiruvambadi Rd, opposite Nikhil Ayurvedic Heritage,<br>Varkala, Kerala — 695141</span></li>
+          <li><i class="fas fa-phone-alt" aria-hidden="true"></i><a href="tel:+919846923877">+91 98469 23877</a></li>
+          <li><i class="fas fa-envelope" aria-hidden="true"></i><a href="mailto:info@deauvillhomestay.com">info@deauvillhomestay.com</a></li>
+          <li><i class="fas fa-clock" aria-hidden="true"></i><span>7 days a week, 8 AM – 9 PM IST</span></li>
+        </ul>
+        <div class="contact-btns">
+          <a href="https://wa.me/919846923877?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20stay%20at%20Deauvill%20Homestay%20Varkala" class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp" aria-hidden="true"></i> Chat on WhatsApp</a>
+          <a href="tel:+919846923877" class="btn btn-ghost"><i class="fas fa-phone" aria-hidden="true"></i> Call Us Now</a>
+        </div>
+      </div>
+      <div class="reveal-r">
+        <form class="booking-form" id="inquiryForm" aria-label="Booking inquiry form" novalidate>
+          <h3>Send an Inquiry</h3>
+          <div class="form-row">
+            <div class="form-group"><label for="f-name">Your Name *</label><input type="text" id="f-name" name="name" class="form-ctrl" placeholder="Full name" required autocomplete="name"></div>
+            <div class="form-group"><label for="f-phone">Phone / WhatsApp</label><input type="tel" id="f-phone" name="phone" class="form-ctrl" placeholder="+91 XXXXX XXXXX" autocomplete="tel"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label for="f-checkin">Check-in Date</label><input type="date" id="f-checkin" name="checkin" class="form-ctrl"></div>
+            <div class="form-group"><label for="f-checkout">Check-out Date</label><input type="date" id="f-checkout" name="checkout" class="form-ctrl"></div>
+          </div>
+          <div class="form-group">
+            <label for="f-room">Room Preference</label>
+            <select id="f-room" name="room" class="form-ctrl">
+              <option value="">Select a room type</option>
+              <option value="Comfort Double Room (₹1500/night)">Comfort Double Room — ₹1,500/night</option>
+              <option value="Deluxe Double Room (₹2000/night)">Deluxe Double Room — ₹2,000/night</option>
+              <option value="AC Premium Room (₹2500/night)">AC Premium Room — ₹2,500/night</option>
+            </select>
+          </div>
+          <div class="form-group"><label for="f-msg">Message</label><textarea id="f-msg" name="message" class="form-ctrl" rows="3" placeholder="Any special requests or questions?"></textarea></div>
+          <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:4px"><i class="fab fa-whatsapp" aria-hidden="true"></i> Send via WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo">Deauvill <span>Homestay</span></span>
+        <p>A boutique homestay in Varkala, Kerala — just 2 minutes from the beach. Warm Kerala hospitality since 2008.</p>
+        <div class="socials">
+          <a href="#" class="social-a" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+          <a href="#" class="social-a" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="https://wa.me/919846923877" class="social-a" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#rooms">Rooms &amp; Rates</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Our Rooms</h4>
+        <ul>
+          <li><a href="#rooms">Comfort Double</a></li>
+          <li><a href="#rooms">Deluxe Double</a></li>
+          <li><a href="#rooms">AC Premium Room</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+919846923877">+91 98469 23877</a></li>
+          <li><a href="mailto:info@deauvillhomestay.com">info@deauvillhomestay.com</a></li>
+          <li><a href="https://maps.app.goo.gl/WExFQ8sgijJHnibP9" target="_blank" rel="noopener noreferrer">Get Directions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Deauvill Homestay, Varkala, Kerala. All rights reserved.</p>
+      <p>Crafted with care in Kerala, India</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919846923877?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20a%20stay%20at%20Deauvill%20Homestay%20Varkala" class="float-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp" aria-hidden="true"></i>
+</a>
+
+<!-- Floating Book Now (desktop only) -->
+<a href="https://wa.me/919846923877?text=Hi%2C%20I%27d%20like%20to%20book%20a%20stay%20at%20Deauvill%20Homestay%20Varkala" class="float-book btn btn-gold" id="floatBook" target="_blank" rel="noopener noreferrer" aria-label="Book your stay now">
+  Book Now — From ₹1,500
+</a>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  const floatBook = document.getElementById('floatBook');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 70);
+    floatBook.classList.toggle('show', window.scrollY > 500);
+  }, { passive: true });
+
+  // Mobile menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  const mobileClose = document.getElementById('mobileClose');
+  const openMenu = () => { mobileNav.classList.add('open'); hamburger.setAttribute('aria-expanded','true'); document.body.style.overflow='hidden'; };
+  const closeMenu = () => { mobileNav.classList.remove('open'); hamburger.setAttribute('aria-expanded','false'); document.body.style.overflow=''; };
+  hamburger.addEventListener('click', openMenu);
+  mobileClose.addEventListener('click', closeMenu);
+  document.querySelectorAll('.mob-link').forEach(l => l.addEventListener('click', closeMenu));
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal, .reveal-l, .reveal-r');
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+  revealEls.forEach(el => obs.observe(el));
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => { i.classList.remove('open'); i.querySelector('.faq-q').setAttribute('aria-expanded','false'); });
+      if (!wasOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+    });
+  });
+
+  // Form → WhatsApp
+  document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name     = document.getElementById('f-name').value.trim();
+    const phone    = document.getElementById('f-phone').value.trim();
+    const checkin  = document.getElementById('f-checkin').value;
+    const checkout = document.getElementById('f-checkout').value;
+    const room     = document.getElementById('f-room').value;
+    const msg      = document.getElementById('f-msg').value.trim();
+    if (!name) { document.getElementById('f-name').focus(); return; }
+    let text = `Hi, I'd like to enquire about a stay at Deauvill Homestay Varkala.\n\nName: ${name}`;
+    if (phone)    text += `\nPhone: ${phone}`;
+    if (checkin)  text += `\nCheck-in: ${checkin}`;
+    if (checkout) text += `\nCheck-out: ${checkout}`;
+    if (room)     text += `\nRoom: ${room}`;
+    if (msg)      text += `\n\nMessage: ${msg}`;
+    window.open('https://wa.me/919846923877?text=' + encodeURIComponent(text), '_blank');
+  });
+
+  // Smooth scroll offset for sticky nav
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) { e.preventDefault(); window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 75, behavior: 'smooth' }); }
+    });
+  });
+</script>
 
 </body>
 </html>
