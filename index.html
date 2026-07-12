@@ -1421,9 +1421,18 @@
     }
 
     .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 24px;
+      padding-bottom: 32px;
+      margin-top: 48px;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .reviews-grid::-webkit-scrollbar {
+      display: none;
     }
 
     .review-card {
@@ -1432,6 +1441,8 @@
       padding: 32px;
       position: relative;
       transition: var(--transition);
+      flex: 0 0 calc(33.333% - 16px);
+      scroll-snap-align: start;
     }
 
     .review-card:hover {
@@ -2296,8 +2307,8 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .reviews-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .review-card {
+        flex: 0 0 calc(50% - 12px);
       }
     }
 
@@ -2367,8 +2378,8 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .reviews-grid {
-        grid-template-columns: 1fr;
+      .review-card {
+        flex: 0 0 calc(85% - 8px);
       }
 
       .gallery-grid {
@@ -2968,12 +2979,127 @@
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow">Guest Stories</span>
-        <h2 id="reviews-h">What Our Families Say</h2>
+        <h2 id="reviews-h">What Our Guests Say</h2>
         <div class="gold-line"></div>
-        <p>Hear from families and groups who have discovered the magic of a private stay at Deauvill Homestay.</p>
+        <p>Swipe to read genuine 4 and 5-star experiences from families and travelers who stayed with us at Deauvill
+          Homestay.</p>
       </div>
       <div class="reviews-grid">
+        <article class="review-card reveal">
+          <span class="review-q" aria-hidden="true">"</span>
+          <div class="stars" aria-label="4 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+          <p class="review-text">"I had a wonderful stay at Deuville homestay. I stayed for 5 weeks because I felt
+            comfortable and safe there as a solo female traveller. It is located just behind the cliff, close to all
+            restaurants but not in the most noisy part. The owner Mr Pratheep is very friendly, kind and helpful... Well
+            recommended. I would go back!"</p>
+          <div class="reviewer">
+            <div class="reviewer-av" aria-hidden="true">M</div>
+            <div>
+              <p class="reviewer-name">Marie Ahlenius</p>
+              <div class="review-src"><i class="fab fa-google" aria-hidden="true"></i> Google Review</div>
+            </div>
+          </div>
+        </article>
+
         <article class="review-card reveal d1">
+          <span class="review-q" aria-hidden="true">"</span>
+          <div class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="review-text">"I LOVED this place. I’m so glad I moved here from another place I was less happy in.
+            It is no frills, basic accommodation but if that is what you’re looking for, stay here! Pradeep takes great
+            pride in his accommodation, keeping it pristine clean. I’d definitely stay here again! Thank you, Pradeep!"
+          </p>
+          <div class="reviewer">
+            <div class="reviewer-av" aria-hidden="true">C</div>
+            <div>
+              <p class="reviewer-name">carolinita</p>
+              <div class="review-src"><i class="fab fa-google" aria-hidden="true"></i> Google Review</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card reveal d2">
+          <span class="review-q" aria-hidden="true">"</span>
+          <div class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="review-text">"I had a wonderful stay at this homestay in Varkala. The service was excellent from
+            start to finish, and the rooms were spotless, comfortable, and well-maintained. The location is
+            perfect—close to the cliff, beach, and cafes, yet peaceful enough to relax. Highly recommended!"</p>
+          <div class="reviewer">
+            <div class="reviewer-av" aria-hidden="true">P</div>
+            <div>
+              <p class="reviewer-name">Prakash</p>
+              <div class="review-src"><i class="fab fa-google" aria-hidden="true"></i> Google Review</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card reveal d3">
+          <span class="review-q" aria-hidden="true">"</span>
+          <div class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="review-text">"We (family of 3) thoroughly enjoyed our stay at Deauvil for many reasons. First of all
+            the host Pratheep was very helpful to us throughout our stay with whatever we needed, the location was
+            excellent with only a very short walk to the cliff... incredible value for money. Will definitely be back."
+          </p>
+          <div class="reviewer">
+            <div class="reviewer-av" aria-hidden="true">A</div>
+            <div>
+              <p class="reviewer-name">Aja Lethaby</p>
+              <div class="review-src"><i class="fab fa-google" aria-hidden="true"></i> Google Review</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card reveal">
+          <span class="review-q" aria-hidden="true">"</span>
+          <div class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="review-text">"Lovelyy place , the owner is so sweet and kind , would really suggest this place for a
+            budget friendly stay 💗"</p>
+          <div class="reviewer">
+            <div class="reviewer-av" aria-hidden="true">J</div>
+            <div>
+              <p class="reviewer-name">Jess Siingai</p>
+              <div class="review-src"><i class="fab fa-google" aria-hidden="true"></i> Google Review</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card reveal d1">
+          <span class="review-q" aria-hidden="true">"</span>
+          <div class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="review-text">"Close to cliff and beach. Clean n good room with private balcony. It is close to cliff
+            but still in a quiet location. We slept very good without any disturbance. Manager is very helpful and
+            serviceminded. This was a perfect place for us to stay n we will come back."</p>
+          <div class="reviewer">
+            <div class="reviewer-av" aria-hidden="true">E</div>
+            <div>
+              <p class="reviewer-name">Eva Olofsson</p>
+              <div class="review-src"><i class="fab fa-google" aria-hidden="true"></i> Google Review</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card reveal d2">
+          <span class="review-q" aria-hidden="true">"</span>
+          <div class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p class="review-text">"Very near to cliff beach, Rooms are very clean, Room rent is cheap and reasonable,
+            then the owner of the hotel very humble and friendly person, had a good experience, I will visit this hotel
+            again"</p>
+          <div class="reviewer">
+            <div class="reviewer-av" aria-hidden="true">S</div>
+            <div>
+              <p class="reviewer-name">SYED ZAHIR ALAM</p>
+              <div class="review-src"><i class="fab fa-google" aria-hidden="true"></i> Google Review</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="review-card reveal d3">
           <span class="review-q" aria-hidden="true">"</span>
           <div class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
               class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
@@ -2984,12 +3110,12 @@
             <div class="reviewer-av" aria-hidden="true">M</div>
             <div>
               <p class="reviewer-name">The Menon Family</p>
-              <p class="reviewer-loc">Kochi, Kerala</p>
               <div class="review-src"><i class="fab fa-google" aria-hidden="true"></i> Google Review</div>
             </div>
           </div>
         </article>
-        <article class="review-card reveal d2">
+
+        <article class="review-card reveal">
           <span class="review-q" aria-hidden="true">"</span>
           <div class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
               class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
@@ -3000,12 +3126,12 @@
             <div class="reviewer-av" aria-hidden="true">R</div>
             <div>
               <p class="reviewer-name">Rahul &amp; Meera Sharma</p>
-              <p class="reviewer-loc">Mumbai, India</p>
               <div class="review-src"><i class="fab fa-google" aria-hidden="true"></i> Google Review</div>
             </div>
           </div>
         </article>
-        <article class="review-card reveal d3">
+
+        <article class="review-card reveal d1">
           <span class="review-q" aria-hidden="true">"</span>
           <div class="stars" aria-label="5 out of 5 stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i
               class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
@@ -3016,7 +3142,6 @@
             <div class="reviewer-av" aria-hidden="true">A</div>
             <div>
               <p class="reviewer-name">Ananya Krishnan</p>
-              <p class="reviewer-loc">Bangalore, India</p>
               <div class="review-src"><i class="fab fa-google" aria-hidden="true"></i> Google Review</div>
             </div>
           </div>
